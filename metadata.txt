@@ -1,0 +1,33 @@
+Metadata for database.csv
+This file includes sizes and optimal prey sizes of aquatic predators.
+COLUMNS:
+X: index value assigned alphabetically.
+name: identifier of the predator as species plus stage
+species: species of the predator if available
+esd: equivalent spherical diameter of the predator in microns
+opt: optimal prey size in microns
+group: predator feeding group (PFG)
+type: type of predator
+source: reference of the register 
+kingdom: the kingdom of the predator
+phylum: phylum of the predator
+class: class of the predator
+order: order of the predator
+family: family of the predator
+genus: genus of the predator
+tag: feeding guild of the predator, constructed by the combination of the fields 'group' and 'type'
+
+Metadata for WORMS_names_taxonomy.csv
+This file includes the taxonomy of aquatic predators.
+It is identical to the JSON metadata of WORMS (https://www.marinespecies.org/aphia.php?p=manual) with the addition of the field name, which connects to the file database.csv.
+
+Metadata for minimal_model.csv
+This file includes size limits of feeding guilds extracted from data.
+COLUMNS:
+group: predator feeding group (PFG)
+type: type of predator
+min.esd: minimum body size of the predator in microns
+max.esd: maximum body size of the predator in microns
+s: specialization factor calculated for the feeding guild
+color: indexed color for plotting purposes
+lty: indexed line type for plotting purposes
