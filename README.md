@@ -9,6 +9,7 @@ Code and data available in https://github.com/ovgarol/z
 
 ### Input data
   database.csv: database of optimal prey size of aquatic predators
+  
   minimal_model.csv: database of feeding guilds in aquatic ecosystems
 
 ### External data
