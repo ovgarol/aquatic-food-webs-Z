@@ -1,17 +1,22 @@
-setwd('/home/og/Documents/articles/functionalFeedingMode/')
+setwd('/home/og/Documents/articles/functionalFeedingMode/Z')
 
 library(scales)
 library(latex2exp)
+library(igraph)
 
 ####
 # DATA INPUT
 ####
 ## read db.all directly
-db.all = read.csv("repo/database.csv")
-db.all$tag = as.factor(paste(db.all$group,'-',db.all$type))
+db.all = read.csv("./data/database.csv",comment.char = '#')
+if(F){
+  db.all$type[db.all$class=='Cephalopoda'] = 'cephalopoda'
+  db.all$group[db.all$class=='Cephalopoda'] = 'Invertebrate'
+  db.all$tag = as.factor(paste(db.all$group,'-',db.all$type))
+}
 
 ## read database of limits of each feeding group constructed by data
-db.mm = read.csv("repo/minimal_model.csv",comment.char = '#')
+db.mm = read.csv("./data/minimal_model.csv",comment.char = '#')
 db.mm$tag = paste(db.mm$group,db.mm$type,sep=' - ')
 db.mm$mean.D = 0.5*(log(db.mm$min.esd)+log(db.mm$max.esd))
 
@@ -41,9 +46,10 @@ abs = function(x)  base::abs(x)
 
 
 bounding.box = function(esd.min,esd.max,kw,mean.m,s,mean.D,stiffness,col='gray',...){
+  kw=1+1/sqrt(3)
   qq.min<-1e0*exp(exp(-s**2)*(log(esd.min)-mean.D)+mean.D+mean.m+s/stiffness-0*gamma*(log(esd.min)-mean.D+3)**2-0.45)
   qq.max<-1e0*exp(exp(-s**2)*(log(esd.max)-mean.D)+mean.D+mean.m+s/stiffness-0*gamma*(log(esd.max)-mean.D+3)**2-0.45)
-  polygon(c(esd.min,esd.max,esd.max,esd.min), c(qq.min/kw,qq.max/kw,qq.max*kw,qq.min*kw),border=alpha(col,1),lwd=1,col=alpha(col,0.15),...)
+  polygon(c(esd.min,esd.max,esd.max,esd.min), c(qq.min/kw,qq.max/kw,qq.max*kw,qq.min*kw),border=alpha(col,0),lwd=1,col=alpha(col,0.25),...)
   #lines(c(esd.min,esd.max),c(qq.min,qq.max))
   #points(exp(0.5*(log(esd.min)+log(esd.max))), exp(0.5*(log(qq.min)+log(qq.max))),pch='*',cex=3)
   return(lm(log(c(qq.min,qq.max))~log(c(esd.min,esd.max))))
@@ -58,6 +64,24 @@ minimal.model = function(esd.min,esd.max,s,type=1,...){
   rr = bounding.box(esd.min,esd.max,2*2/sqrt(3),m.bar,s*sqrt(a),esd.bar,sqrt(a),...)
   return(rr)
 } 
+
+Min.Spec = function(D,tag,db.mm){
+  temp = db.mm[db.mm$tag == tag,]
+  esd.min = temp$min.esd
+  esd.max = temp$max.esd
+  esd.bar = 0.5*(log(esd.min)+log(esd.max))
+  m.bar = -exp(-0.77+0.14*esd.bar) # Eq(c)
+  #m.bar = 0.13-0.23*esd.bar # Eq(c)
+  a = exp(-2.92 + 0.26*esd.bar) # Eq(b)
+  s = temp$s*sqrt(a)
+  qq.min = 1e0*exp(exp(-s**2)*(log(esd.min)-esd.bar)+esd.bar+m.bar+s/sqrt(a)-gamma*(log(esd.min)-esd.bar+3)**2-0.33)
+  qq.max = 1e0*exp(exp(-s**2)*(log(esd.max)-esd.bar)+esd.bar+m.bar+s/sqrt(a)-gamma*(log(esd.max)-esd.bar+3)**2-0.33)
+  #mmm = lm(log(c(qq.min,qq.max))~log(c(esd.min,esd.max)))
+  #ops = mmm$coefficients[1] + mmm$coefficients[2]*log(D)
+  ops = log(0.5*(qq.min+qq.max))
+  return(ops)
+}
+
 
 #####
 # CHECKING CONSISTENCY   
@@ -236,6 +260,7 @@ for(j in 1:length(db.all$tag)){
   db.all$a[j] = temp$a[1]
   db.all$stiffness[j] = temp$stiffness[1]
   db.all$ops.0[j] = exp(-0.33-r.offset+OPS(log(db.all$esd[j]),db.all$mean.D[j],db.all$mean.m[j],db.all$s[j],a=db.all$stiffness[j]))
+  db.all$ops.2[j] = exp(r.offset+log(db.all$esd[j])-gamma*log(db.all$esd[j])**2)
   db.all$ops.2[j] = exp(OPS(log(db.all$esd[j]),db.all$mean.D[j],-0.,0,a=db.all$stiffness[j],gamma=gamma))
 }
 
@@ -299,8 +324,8 @@ if(T){
   #axis(side=2,at=log(c(0.1,0.2,0.5,1,2,5,10)),labels=c(0.1,0.2,0.5,1,2,5,10),las=1)
   abline(h=900,lty=5,col='gray',lwd=5)
   abline(h=900,lty=1,col='white',lwd=4)
-  axis.break(axis=2,breakpos=900,pos=NULL,bgcol="white",breakcol="black",
-             style="slash",brw=0.02)
+  #axis.break(axis=2,breakpos=900,pos=NULL,bgcol="white",breakcol="black",
+  #           style="slash",brw=0.02)
 }
 
 y=c(1e-1,1e0,1e1,1e2,1e3,1e4,1e5,1e6,1e7)
@@ -362,6 +387,15 @@ axis(side=2, at=(y), labels=y.lab,las=1,cex.lab=1.)
 v = log(1e0):log(2e7)
 my.lines(exp(v),exp(OPS(v,0,0,0,a=0)),col='black',lwd=3) # plotting allometric rule
 
+##to include cephalopods
+if(F){
+  points(opt~esd,data=db.all[db.all$class=='Cephalopoda',],pch=19)
+  abline(lm(log10(opt)~log10(esd),data=db.all[db.all$class=='Cephalopoda',]))
+  s=lm(log(opt)~log(esd),data=db.all[db.all$class=='Cephalopoda',])
+  summary(s)
+  
+
+}
 
 ## Fig 2b: plot of feeding guilds
 
@@ -373,7 +407,7 @@ plot(1,xlim=range(db.all$esd),ylim=range(db.all$opt),log='xy',type='n',
 
 lines(size.range,size.range,lty=2)
 the.shape = c(25,23,24)[1 + as.numeric(db.all$ss>-0.33) + as.numeric(db.all$ss >0.33)]
-#points(opt~esd,data=db.all,pch=the.shape,bg=the.col,lwd=1,cex=1*(1+0*as.numeric(the.shape>23)),col='white') # to include individual data points
+points(opt~esd,data=db.all,pch=the.shape,bg=the.col,lwd=1,cex=1*(1+0*as.numeric(the.shape>23)),col='white') # to include individual data points
 #my.lines(exp(v),exp(OPS(v,0,0,0,a=0)),col='black',lwd=1) # to include allometric rule
 
 axis(side=1, at=(y), labels=y.lab,las=1,cex.lab=1.)
@@ -401,10 +435,11 @@ lines(size.range,size.range,lty=2)
 ## creating data frame for mechanistically defined model
 db.sp = data.frame(min.esd=0,max.esd=0,s=0,tag=NA)
 
-ii = 1 # auxiliary iterator
-w = 3.5 # universal width for each feeding guild
+ii = log(2.5) # auxiliary iterator
+w = 3.4 # universal width for each feeding guild
+##8.081300 5.387533 4.040650 3.232520 2.693767 2.308943 2.020325 1.795844 1.616260
 
-if(T)for(i in 1:4){ # four size classes
+if(T)for(i in 1:(ceiling(log(6715296)/w)-1)){ # four size classes
   for(j in -2:1){ # possible values of specialization 
     D.min = exp(ii+abs(j)+0*(j < -1)) # min predator size + offset to specialists
     D.max = exp(ii+w+abs(j)+0*(j < -1)) # max predator size + offset to specialists
@@ -412,7 +447,7 @@ if(T)for(i in 1:4){ # four size classes
     the.s = j*0.014*(log(the.D/1e0))**2 # Table 1, Eq(d) 
     #the.s = j*(0.15*(ii+w+1*(j < -1)+abs(j))) # alternative Eq
     the.s = j*(0.17*(log(the.D))) # linear Eq(d)
-    
+      
     if(j< -1 & (ii+w > log(1e4) )) next # ignoring additional small prey specialists in larger size classes
     minimal.model(D.min,D.max,the.s,col=c('magenta','darkmagenta','darkgray','darkcyan')[3+j]) # plotting mechanistic model
     db.sp = rbind(db.sp,c(D.min,D.max,the.s,paste0('tag',i,j)),stringsAsFactors = FALSE) # adding model to 
