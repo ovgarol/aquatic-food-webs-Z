@@ -5,18 +5,20 @@ Code and data available in https://github.com/ovgarol/z
 
 ## Requirenments
 ### Software
-  R, including libraries: scales, latex2exp
+  R, including libraries: scales, latex2exp, igraph
 
 ### Input data
   database.csv: database of optimal prey size of aquatic predators
   
   minimal_model.csv: database of feeding guilds in aquatic ecosystems
 
+  physio_data: limit1 to limit6 # energetic and mechanical limits described in Portalier et al. (2019). 
+
 ### External data
   283_2_FoodWebDataBase_2018_12_10.csv: GATEWAy database available in https://idata.idiv.de/ddm/Data/ShowData/283?version=3
 
 ## Execution
-Run the following two scripts in sequence
+Run the following scripts in the enumerated sequence:
 
 Figure-script-1.R   # calculates the Z-model using the data collated in database.csv and minimal_model.csv
 
