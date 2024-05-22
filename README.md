@@ -22,6 +22,19 @@ Figure-script-1.R   # calculates the Z-model using the data collated in database
 
 Figure-script-2.R   # applies to generated model in the script above and compare it to the sites of the database GATEWAy database  
 
+Figure-script-3.R   # calculates the horizontal bands
+
+Figure-script-4.R   # plot map of studied ecosystems
+
+Figure-script-5.R   # physical limits for preu acquisition
+
+Figure-script-6.R   # Accuracy and complexity of artificial food webs (supplement B)
+
+Figure-script-7.R   # ood web topology (supplement C)
+
+Figure-script-8.R   # comparison of food webs reconstructions sub-samples
+
+
 ## Additional data
 WORMS_names_taxonomy.csv: taxonomy of the predator species included in database.csv
 
