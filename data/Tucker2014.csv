@@ -1,0 +1,212 @@
+Taxon,Trophic level,Mass (log10 kg),Prey mass (log10 kg),Predator Prey ratio (log10),Diet,Niche,Environment,Predator Diet Source,Predator Body Mass Source,Prey mass Source,Niche Source
+Arctocephalus_gazella,3.7,1.5,-1.8,3.3,Carnivore,Zooplankton,Marine,Pauly et al. 1998,Staniland et al. 2010,Ciaputa et al. 2006,Pauly et al. 1998
+Arctocephalus_tropicalis,4.1,1.5,-1.3,2.9,Carnivore,Squid,Marine,Pauly et al. 1998,DeBruyn et al. 2009,"Ciaputa et al. 2006, Robinson et al. 2002",Pauly et al. 1998
+Balaena_mysticetus,3.2,4.5,-3.9,8.4,Carnivore,Zooplankton,Marine,Pauly et al. 1998,Heide-Jorgensen et al. 2007,Pomerleau et al. 2011,Pauly et al. 1998
+Balaenoptera_acutorostrata,3.4,3.8,-4.0,7.7,Carnivore,Zooplankton,Marine,Pauly et al. 1998,Jones et al. 2009,"Smout et al. 2007, Weslawski et al. 2006",Pauly et al. 1998
+Balaenoptera_borealis,3.4,4.3,-4.7,9.1,Carnivore,Zooplankton,Marine,Pauly et al. 1998,Jones et al. 2009,"Weslawski et al. 2006, Kenney et al. 1997",Pauly et al. 1998
+Balaenoptera_edeni,3.7,4.3,-0.7,5.0,Carnivore,Fish,Marine,Pauly et al. 1998,Jones et al. 2009,"Froese & Pauly 2011, Hart et al. 1973, Tershy 1992, Weslawski et al. 2006",Pauly et al. 1998
+Balaenoptera_musculus,3.2,5.2,-3.3,8.5,Carnivore,Zooplankton,Marine,Pauly et al. 1998,Jones et al. 2009,"Mizdalski 1988, Fiedler 1998",Pauly et al. 1998
+Balaenoptera_physalus,3.4,4.7,-4.1,8.8,Carnivore,Zooplankton,Marine,Pauly et al. 1998,Jones et al. 2009,"Tershey et al. 1973, Weslawski et al. 2006",Pauly et al. 1998
+Berardius_arnuxii,4.1,4.7,-0.2,4.9,Carnivore,Fish,Marine,Pauly et al. 1998,Jones et al. 2009,"Jefferson et al. 1993, Culik 2010",Pauly et al. 1998
+Berardius_bairdii,4.2,3.9,-0.2,4.0,Carnivore,Squid,Marine,Pauly et al. 1998,Jones et al. 2009,Walker et al. 2002,Pauly et al. 1998
+Callorhinus_ursinus,4.2,4.1,-0.6,4.6,Carnivore,Fish,Marine,Pauly et al. 1998,Jones et al. 2009,Kurle et al. 2001,Pauly et al. 1998
+Caperea_marginata,3.2,1.7,-5.1,6.8,Carnivore,Zooplankton,Marine,Pauly et al. 1998,Jones et al. 2009,"Mizdalski 1988, Jefferson 1993",Pauly et al. 1998
+Cephalorhynchus_commersonii,3.9,4.5,-0.6,5.1,Carnivore,Fish,Marine,Pauly et al. 1998,Jones et al. 2009,Clarke et al. 1994,Pauly et al. 1998
+Cephalorhynchus_heavisidii,4.3,1.9,-0.3,2.2,Carnivore,Fish,Marine,Pauly et al. 1998,Elwin et al. 2006,"Elwin et al. 2006, Eder et al. 2005",Pauly et al. 1998
+Cephalorhynchus_hectori,4.2,1.9,-0.1,2.0,Carnivore,Fish,Marine,Pauly et al. 1998,Jones et al. 2009,"Meynier et al. 2009, Wilcox et al. 2001",Pauly et al. 1998
+Cystophora_cristata,4.2,1.7,-3.9,5.6,Carnivore,Fish,Marine,Pauly et al. 1998,Bajzak et al. 2009,"Vilhjamsson 2002, Hammil 2000",Pauly et al. 1998
+Delphinapterus_leucas,4.0,2.6,-3.9,6.5,Carnivore,Fish,Marine,Pauly et al. 1998,Hobbs et al. 2005,"Dahl et al. 2000, Weslawski et al. 2006",Pauly et al. 1998
+Delphinus_delphis,4.2,4.2,-0.5,4.7,Carnivore,Fish,Marine,Pauly et al. 1998,Jones et al. 2009,"Eder et al. 2005, Romero et al. 2012,",Pauly et al. 1998
+Enhydra_lutris,3.4,1.9,-0.7,2.6,Carnivore,Benthic Invertebrate,Marine,Pauly et al. 1998,Ralls et al. 1996,"Wolt et al. 2012, Kvitek et al. 1992, Mc Mahon 1979, Menge 1979, ",Pauly et al. 1998
+Erignathus_barbatus,3.4,1.4,-3.7,5.1,Carnivore,Benthic Invertebrate,Marine,Pauly et al. 1998,Jones et al. 2009,"Weslawski et al. 2006, Hjelset et al. 1990",Pauly et al. 1998
+Eschrichtius_robustus,3.3,2.5,-6.0,8.5,Carnivore,Benthic Invertebrate,Marine,Pauly et al. 1998,Lockyer 1976,"Pritchard et al. 1979, Weslawski et al. 2006, Dunham et al. 2002, Griffen et al. 2004",Pauly et al. 1998
+Eubalaena_glacialis,3.2,4.2,-7.1,11.3,Carnivore,Zooplankton,Marine,Pauly et al. 1998,Kenney 1986,"Baumgartner et al. 2005, Weslawski et al. 2006, Mayo et al. 1990",Pauly et al. 1998
+Eumetopias_jubatus,4.2,4.6,-0.7,5.3,Carnivore,Fish,Marine,Pauly et al. 1998,Merrick et al.  1997,"Kurle et al. 2001, Sinclair et al. 2002, Van Pelt et al. 1997, Smith et al. 1988",Pauly et al. 1998
+Feresa_attenuata,4.4,3.4,-0.6,4.1,Carnivore,Squid,Marine,Pauly et al. 1998,Stuart & Stuart 2001,"Zerbini et al. 1997, Santos et al. 1997, ",Pauly et al. 1998
+Globicephala_melas,4.4,2.2,-0.7,2.9,Carnivore,Squid,Marine,Pauly et al. 1998,Heide jorgenson  2002,Clarke et al. 1994,Pauly et al. 1998
+Halichoerus_grypus,4.0,3.1,1.0,2.1,Carnivore,Fish,Marine,Pauly et al. 1998,Sjoberg and Ball 2000,"Hammill et al. 2000,  Weslawski et al. 2006, Vihjlmsson et al. 2002, Van Pelt et al. 1997 ",Pauly et al. 1998
+Hydrurga_leptonyx,4.1,1.9,1.7,0.2,Carnivore,Mammal,Marine,Pauly et al. 1998,"Tracey Rogers, unpublished","Hall Apsland et al. 2004, Mizdalski 1988, Adam 2005",Pauly et al. 1998
+Hyperoodon_ampullatus,4.2,2.5,-1.0,3.6,Carnivore,Squid,Marine,Pauly et al. 1998,Noren 2000,Ainley et al. 2004,Pauly et al. 1998
+Kogia_breviceps,4.4,3.8,-0.7,4.5,Carnivore,Squid,Marine,Pauly et al. 1998,Noren 2000,West et al. 2009,Pauly et al. 1998
+Lagenorhynchus_obliquidens,4.1,2.6,-1.0,3.6,Carnivore,Fish,Marine,Pauly et al. 1998,Noren 2000,"Morton et al. 2000, Vilhjamsson 2002, Kurle et al. 2001",Pauly et al. 1998
+Leptonychotes_weddellii,4.0,2.1,-0.9,2.9,Carnivore,Fish,Marine,Pauly et al. 1998,Plötz et al. 2009,"Casaux et al. 2008, O'Droscoll et al. 2011, Kock et al. 2008, Artigues et al. 2003",Pauly et al. 1998
+Lissodelphis_borealis,4.4,2.6,-1.3,3.9,Carnivore,Fish,Marine,Pauly et al. 1998,Noren 2000,"Jefferson et al. 1993, Clarke et al. 1994, Watanabe et al. 1999",Pauly et al. 1998
+Lobodon_carcinophaga,3.3,2.1,-1.8,3.9,Carnivore,Zooplankton,Marine,Pauly et al. 1998,"Bornemann & Plötz 2005, Southwell et al. 2003","Artigues et al. 2003, Huckstadt et al. 2012, Mizdalski 1988",Pauly et al. 1998
+Lontra_canadensis,3.5,2.4,-1.0,3.4,Carnivore,Benthic Invertebrate,Marine,Pauly et al. 1998,Blundell et al. 2000,"Reid et al. 1994, Noguchi et al. 1991, Palace et al. 2001",Pauly et al. 1998
+Megaptera_novaeangliae,3.6,1.0,-3.3,4.3,Carnivore,Zooplankton,Marine,Pauly et al. 1998,Dalla Rosa et al. 2008,"Friedlaender  et al. 2008, Mizdalski 1988",Pauly et al. 1998
+Mesoplodon_carlhubbsi,4.4,4.5,-0.7,5.3,Carnivore,Squid,Marine,Pauly et al. 1998,Jefferson 2008,"Clarke et al. 1998, Clarke et al. 1994, MacLeod et al. 2003",Pauly et al. 1998
+Mesoplodon_densirostris,4.4,3.2,-0.8,4.0,Carnivore,Squid-fish,Marine,Pauly et al. 1998,Jefferson 2008,"Clarke et al. 1994, MacLeod et al. 2003,  Belman et al. 1976, Ruiz-Capilla et al. 2001",Pauly et al. 1998
+Mesoplodon_layardii,4.4,3.0,-0.8,3.8,Carnivore,Squid,Marine,Pauly et al. 1998,Jefferson 2008,MacLeod et al. 2003,Pauly et al. 1998
+Mesoplodon_mirus,4.5,3.1,-1.8,4.9,Carnivore,Squid,Marine,Pauly et al. 1998,Reidenberg & Laitman 2009,"McLeod et al. 2003, Clarke et al. 1994",Pauly et al. 1998
+Mirounga_angustirostris,4.3,3.2,-0.8,3.9,Carnivore,Squid,Marine,Pauly et al. 1998,LeBoeuf et al. 2000,"Clarke et al. 1994, Eder et al. 2005, Seibel et al. 1997, Glaser 2010, Antonelis et al. 1987, Condit et al. 1984",Pauly et al. 1998
+Mirounga_leonina,4.3,3.1,-0.1,3.2,Carnivore,Squid,Marine,Pauly et al. 1998,Bornemann et al. 2000,"Glaser 2010, Artigues et al. 2003, Ainley et al. 2008, Cherel et al. 2004, Slip 1995",Pauly et al. 1998
+Monodon_monoceros,4.2,3.2,-0.9,4.0,Carnivore,Squid,Marine,Pauly et al. 1998,Dietz et al. 2008,"Zumholz et al. 2007, Finley et al. 1982, Van Pelt et al. 1997, Koie et al. 2008",Pauly et al. 1998
+Ommatophoca_rossii,4.1,3.1,-0.5,3.6,Carnivore,Squid,Marine,Pauly et al. 1998,Southwell et al. 2005,Skinner et al. 1994,Pauly et al. 1998
+Orcinus_orca,4.5,2.3,4.0,-1.7,Carnivore,Mammal-fish,Marine,Pauly et al. 1998,Andrews et al. 2008,"Artigues et al. 2003, Pitman et al. 2003, Ford et al. 1998, Bornemann et al. 2005,  Southwell 2003,  Jones et al. 2009",Pauly et al. 1998
+Otaria_flavescens,4.0,4.8,-0.7,5.4,Carnivore,Fish,Marine,Pauly et al. 1998,Campagna et al. 2001,"Thompson et al. 1998, Eder et al. 2005, Clarke et al. 1994, Clausen et al. 2003",Pauly et al. 1998
+Phoca_vitulina,4.0,2.4,-3.9,6.3,Carnivore,Fish,Marine,Pauly et al. 1998,Smith et al. 2006,"Vilhjamsson 2002, Weslawski 2006",Pauly et al. 1998
+Phocarctos_hookeri,4.0,1.5,0.1,1.4,Carnivore,Squid-fish,Marine,Pauly et al. 1998,Auge et al. 2011,Maynier et al. 2009,Pauly et al. 1998
+Phocoena_phocoena,4.1,2.1,-1.1,3.2,Carnivore,Fish,Marine,Pauly et al. 1998,Johnston et al.  2005,"Santos et al. 2004, Andersen & Beyer 2005, Julshamn et al. 2004",Pauly et al. 1998
+Physeter_catodon,4.4,1.7,-0.1,1.8,Carnivore,Squid,Marine,Pauly et al. 1998,Lockyer 1976,Gaskin et al. 1967,Pauly et al. 1998
+Pontoporia_blainvillei,4.1,4.4,-1.1,5.5,Carnivore,Fish,Marine,Pauly et al. 1998,Danilewicz et al 2002,"Naya et al. 2002, Rodriguez et al. 2002, Amado et al. 2006, Santos et al. 1998, Bolasina 2006",Pauly et al. 1998
+Sotalia_fluviatilis,4.1,1.5,-0.9,2.4,Carnivore,Fish,Marine,Pauly et al. 1998,Flores et al. 2004,"Naya et al. 2002,Godoy et al. 2002, Borobia et al. 1989, Lapa-Guimaraes et al. 2005",Pauly et al. 1998
+Sotalia_guianensis,4.1,1.7,-0.5,2.3,Carnivore,Fish,Marine,Pauly et al. 1998,Oshima et al. 2010,"Godoy et al. 2002, Lapa-Guimares et al. 2005, Di Beneditto et al. 2007",Pauly et al. 1998
+Tursiops_truncatus,4.2,1.9,0.2,1.7,Carnivore,Fish,Marine,Pauly et al. 1998,Gubbins et al. 2002,"Santos et al. 2001, Skog et al. 2003, Kjesbu et al. 1989, Anderson et al. 2005",Pauly et al. 1998
+Ursus_maritimus,5.0,3.5,-1.0,4.5,Carnivore,Mammal,Marine,Pauly et al. 1998,Ferguson et al. 1999,Carbone et al. 2007,Pauly et al. 1998
+Zalophus_californianus,4.1,2.6,2.1,0.5,Carnivore,Fish,Marine,Pauly et al. 1998,Kuhn 2006,"Lowry et al. 1991, Hunter et al. 1980, Williamson et al. 1984, Quitral et al. 2009",Pauly et al. 1998
+Ziphius_cavirostris,4.3,1.9,-0.4,2.4,Carnivore,Squid,Marine,Pauly et al. 1998,Noren 2000,"Santos et al. 2001, Pusineri et al. 2007, Xavier et al. 2002",Pauly et al. 1998
+Acinonyx_jubatus,3.0,1.7,1.5,0.2,Carnivore,Mammal,Terrestrial,Hayward et al. 2006a,Kelt & van Vuren 2001,Carbone 2007,Hayward 2006
+Bassariscus_sumichrasti,3.1,-0.1,-1.5,1.4,Carnivore,Invertebrate,Terrestrial,"McNab 1995, Estrada et al. 1985",Cabone 2007,Carbone 2007,Carbone 2007
+Canis_adustus,2.9,0.9,-0.1,1.0,Carnivore,Invertebrate,Terrestrial,Atkinson et al. 2002,Kelt & van Vuren 2001,Carbone 2007,Carbone 2007
+Canis_aureus,3.4,1.0,-0.8,1.8,Carnivore,Mammal,Terrestrial,Jaeger et al. 2007,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Canis_latrans,3.0,1.1,1.6,-0.5,Carnivore,Mammal,Terrestrial,"Munoz-Garcia et al. 2005, Parker 1986; Carrera et al. 2008",Carbone et al. 2007,Carbone 2007,Carbone 2007
+Canis_lupus,3.1,1.5,1.9,-0.4,Carnivore,Mammal,Terrestrial,Metz et al. 2012; Nowak et al. 2011,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Canis_simensis,3.0,1.2,-0.7,1.9,Carnivore,Mammal,Terrestrial,Marino et al. 2010,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Caracal_caracal,3.0,1.0,1.2,-0.2,Carnivore,Mammal,Terrestrial,Avenant et al. 2002,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Cerdocyon_thous,2.9,0.8,-1.0,1.7,Carnivore,Mammal-Invertebrate,Terrestrial,"Munoz-Garcia et al. 2005, Gatti et al. 2006",Kelt & van Vuren 2001,"MacDonald et al. 1996, Damuth 1987, Kelt & van Vuren 2001",Munoz-Garcia et al. 2005
+Crocuta_crocuta,3.0,1.8,2.0,-0.2,Carnivore,Mammal,Terrestrial,"Cooper 1990, Cooper et al. 1999, Hayward et al. 2006",Carbone et al. 2007,Carbone 2007,Carbone 2007
+Eira_barbara,3.1,0.7,0.6,0.1,Carnivore,Mammal,Terrestrial,"Munoz-Garcia et al. 2005, McNab 1995",Kelt & van Vuren 2001,"McNab 1995, Milton et al. 1976, Damuth 1987",Munoz-Garcia et al. 2005
+Felis_catus,3.3,0.5,-1.2,1.8,Carnivore,Mammal,Terrestrial,"Kutt 2012, Paltridge et al. 1997",Kelt & van Vuren 2001,Kutt 2012,"Kutt 2012, Paltridge et al. 1997"
+Felis_chaus,3.4,0.8,0.0,0.8,Carnivore,Mammal,Terrestrial,Mukherjee et al. 2004,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Genetta_tigrina,3.0,0.3,0.2,0.1,Carnivore,Invertebrate,Terrestrial,Munoz-Garcia et al. 2005,Kelt & van Vuren 2001,Ray et al. 2001,Popowics et al. 1997
+Gulo_gulo,3.0,1.3,1.9,-0.6,Carnivore,Mammal,Terrestrial,"Munoz-Garcia et al. 2005, Myhre et al. 1975",Kelt & van Vuren 2001,"Reimers et al. 1983, Christiansen 2006, Kelt & van Vuren 2001",Munoz-Garcia et al. 2005
+Leopardus_pardalis,3.5,1.0,0.3,0.7,Carnivore,Mammal,Terrestrial,"Munoz-Garcia et al. 2005, Wang 2002",Kelt & van Vuren 2001,Carbone 2007,Munoz-Garcia et al. 2005
+Leopardus_wiedii,3.0,0.6,0.3,0.3,Carnivore,Mammal,Terrestrial,Munoz-Garcia et al. 2005,Kelt & van Vuren 2001,Wang 2002,Munoz-Garcia et al. 2005
+Leptailurus_serval,3.5,1.0,-1.3,2.3,Carnivore,Invertebrate,Terrestrial,"Munoz-Garcia 2005, Thiel 2011 ",Carbone et al. 2007,Carbone 2007,Carbone 2007
+Lycaon_pictus,3.0,1.4,1.5,-0.1,Carnivore,Mammal,Terrestrial,Hayward et al. 2008,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Lynx_canadensis,3.0,1.0,0.1,0.8,Carnivore,Mammal,Terrestrial,Poole 2003,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Lynx_lynx,3.1,1.4,1.3,0.1,Carnivore,Mammal,Terrestrial,Odden et al. 2006,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Lynx_pardinus,3.1,1.0,0.2,0.9,Carnivore,Mammal,Terrestrial,Gil-Sanchez et al. 2006,Kelt & van Vuren 2001,Carbone 2007,Gil-Sanchez et al. 2006
+Lynx_rufus,3.5,1.1,-0.2,1.2,Carnivore,Mammal,Terrestrial,Delibes et al. 1988,Kelt & van Vuren 2001,"Swihart 1986, Djawden et al. 1988",Delibes et al. 1988
+Martes_foina,3.1,0.3,-2.5,2.7,Carnivore,Invertebrate,Terrestrial,Bakaloudis et al. 2011,Kelt & van Vuren 2001,"Dwarakanath 1971, Reichle 1968",Bakaloudis et al. 2011
+Martes_martes,2.9,0.1,-1.3,1.4,Carnivore,Invertebrate,Terrestrial,"Munoz-Garcia et al. 2005, Caryl et al. 2012",Carbone et al. 2007,Carbone 2007,Carbone 2007
+Martes_pennanti,3.1,0.6,-0.1,0.8,Carnivore,Mammal,Terrestrial,Giuliano et al. 1989,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Meles_meles,2.8,1.0,-1.5,2.5,Carnivore,Invertebrate,Terrestrial,"Munoz-Garcia et al. 2005, Virgos et al. 2004, Goszczynski et al.2000",Carbone et al. 2007,Carbone 2007,Carbone 2007
+Mungos_mungo,3.0,1.0,-2.0,3.0,Carnivore,Invertebrate,Terrestrial,Rood 1975,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Mustela_erminea,2.9,-0.6,-1.3,0.7,Carnivore,Invertebrate,Terrestrial,"Munoz-Garcia et al. 2005, Martinoli et al. 2001",Kelt & van Vuren 2001,Carbone 2007,Carbone 2007
+Mustela_frenata,3.0,-0.8,-1.7,0.9,Carnivore,Invertebrate,Terrestrial,Reid et al. 2008 ,Kelt & van Vuren 2001,Carbone 2007,Carbone 2007
+Mustela_nivalis,3.0,-1.1,-1.5,0.5,Carnivore,Invertebrate,Terrestrial,"Munoz-Garcia et al. 2005, Jedrzejewski et al. 1995",Kelt & van Vuren 2001,Carbone 2007,Carbone 2007
+Mustela_putorius,3.5,0.0,-1.0,1.0,Carnivore,Mammal,Terrestrial,Lode 1997,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Mustela_vison,3.5,0.0,-1.0,1.0,Carnivore,Mammal,Terrestrial,"Munoz-Garcia et al. 2005, Jedrzejewska et al. 2001",Carbone et al. 2007,Carbone 2007,Carbone 2007
+Nasua_nasua,2.6,0.7,-3.7,4.3,Carnivore,Invertebrate,Terrestrial,"Munoz-Garcia et al. 2005, Hirsch 2009, Alves-Costa et al. 2004",Kelt & van Vuren 2001,"Tiunov et al. 2004, De Mischis et al. 1997, Reichle et al. 1968",Munoz-Garcia et al. 2005
+Nyctereutes_procyonoides,3.0,0.8,-1.3,2.1,Carnivore,Invertebrate,Terrestrial,Sutor et al. 2010,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Otocyon_megalotis,2.5,0.6,-3.0,3.6,Carnivore,Invertebrate,Terrestrial,Kuntzsch et al. 2008,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Panthera_leo,3.0,2.2,2.1,0.0,Carnivore,Mammal,Terrestrial,Hayward 2005,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Panthera_onca,3.0,1.8,1.6,0.2,Carnivore,Mammal,Terrestrial,Weckel et al. 2006,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Panthera_pardus,3.0,1.6,1.5,0.1,Carnivore,Mammal,Terrestrial,Hayward et al. 2006b,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Panthera_tigris,3.1,2.2,2.3,0.0,Carnivore,Mammal,Terrestrial,Hayward 2012,Kelt & van Vuren 2001,Carbone 2007,Carbone 2007
+Procyon_lotor,2.7,1.0,-2.7,3.7,Carnivore,Invertebrate,Terrestrial,Munoz-Garcia et al. 2005,Kelt & van Vuren 2001,"Hartnoll et al. 2006, Carrillo et al. 2001",Munoz-Garcia et al. 2005
+Proteles_cristata,3.0,0.9,-3.0,3.9,Carnivore,Invertebrate,Terrestrial,deVries et al. 2011,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Puma_concolor,3.0,1.7,1.9,-0.2,Carnivore,Mammal,Terrestrial,Moreno et al. 2006,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Spilogale_putorius,3.0,-0.2,-0.6,0.4,Carnivore,Mammal-Invertebrate,Terrestrial,"Munoz-Garcia et al. 2005, Crabb 1941",Kelt & van Vuren 2001,"Crabb 1941, Kelt & van Vuren 2001",Munoz-Garcia et al. 2005
+Taxidea_taxus,2.6,0.9,-0.9,1.8,Carnivore,Mammal,Terrestrial,"Munoz-Garcia et al. 2005, Michiner et al. 2004, Sovada et al. 1999",Kelt & van Vuren 2001,"Sovoda et al. 1999, Harestadt et al. 1979, Bradley et al. 1975, ",Munoz-Garcia et al. 2005
+Vulpes_cana,2.8,0.0,-1.5,1.5,Carnivore,Invertebrate,Terrestrial,"Munoz-Garcia et al. 2005, Geffen et al. 1992",Carbone et al. 2007,Carbone 2007,Carbone 2007
+Vulpes_lagopus,3.0,0.7,-1.4,2.1,Carnivore,Mammal,Terrestrial,Munoz-Garcia et al. 2005,Kelt & van Vuren 2001,"Haim et al. 2004, Elmhagen et al. 2000",Munoz-Garcia et al. 2005
+Vulpes_macrotis,3.0,0.7,-0.2,0.8,Carnivore,Mammal,Terrestrial,"Munoz-Garcia et al. 2005, List et al. 2003",Kelt & van Vuren 2001,Carbone 2007,Carbone 2007
+Vulpes_ruepellii,2.9,0.2,-1.6,1.8,Carnivore,Mammal,Terrestrial,"Munoz-Garcia et al. 2005, Williams et al. 2002.",Carbone et al. 2007,"Scott et al. 2000, Reichle et al. 1968, ",Munoz-Garcia et al. 2005
+Vulpes_velox,2.9,0.3,0.1,0.2,Carnivore,Mammal,Terrestrial,Sovada et al. 2001,Carbone et al. 2007,Carbone 2007,Carbone 2007
+Vulpes_vulpes,3.0,0.7,-0.3,1.0,Carnivore,Mammal,Terrestrial,Jedrzejewski et al. 1992,Carbone et al. 2008,Carbone 2007,Carbone 2007
+Dugong_dugon,2.0,2.3,-,-,Herbivore,Grazer,Marine,-,Sheppard et al. 2006,-,Johnstone et al. 1981
+Hydrodamalis_gigas,2.0,4.3,-,-,Herbivore,Grazer,Marine,-,Scheffer 1972,-,Domning et al. 2008
+Trichechus_inunguis,2.0,2.3,-,-,Herbivore,Grazer,Marine,-,Rodrigo et al. 2010,-,Cantanhede et al. 2005
+Trichechus_manatus,2.0,2.5,-,-,Herbivore,Grazer,Marine,-,Kipps et al. 2002,-,Deutsch et al. 2008
+Trichechus_senegalensis,2.0,2.6,-,-,Herbivore,Grazer,Marine,-,Thibault et al. 2003,-,Powell & Kouadio 2008
+Aepyceros_melampus,2.0,1.8,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Dunham et al. 1980
+Ailuropoda_melanoleuca,2.0,1.9,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Carter et al. 1999
+Ailurus_fulgens,2.0,0.7,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Munoz-Garcia et al. 2005
+Alcelaphus_buselaphus,2.0,2.1,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Price, 1978"
+Alces_alces,2.0,2.5,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Irwin, 1985"
+Ammotragus_lervia,2.0,2.2,-,-,Herbivore,Browser-grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Popowics et al. 1997
+Antilocapra_americana,2.0,1.7,-,-,Herbivore,Browser-grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Popowics et al. 1997
+Bathyergus_suillus,2.0,-0.2,-,-,Herbivore,Geophyte,Terrestrial,-,Kelt & van Vuren 2001,-,Bennett et al. 1995
+Bettongia_gaimardi,2.0,0.2,-,-,Herbivore,Mychophagus,Terrestrial,-,Kelt & van Vuren 2001,-,"Taylor, 1992"
+Bison_bison,2.0,2.8,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Popowics et al. 1997
+Bison_bonasus,2.0,2.8,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Brachylagus_idahoensis,2.0,-0.5,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Katzner et al. 1997
+Bradypus_torquatus,2.0,0.6,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Chiarello, 1998"
+Capra_hircus,2.0,1.7,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Capra_pyrenaica,2.0,1.8,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Catagonus_wagneri,2.0,1.5,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Taber et al. 1993
+Cephalophus_callipygus,2.0,1.3,-,-,Herbivore,Frugivore,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Cephalophus_dorsalis,2.0,1.3,-,-,Herbivore,Frugivore,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Ceratotherium_simum,2.0,3.4,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Popowics et al. 1997
+Cervus_elaphus,2.0,2.4,-,-,Herbivore,Browser-grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Popowics et al. 1997
+Cervus_nippon,2.0,1.5,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Coendou_prehensilis,2.0,0.6,-,-,Herbivore,Granivore,Terrestrial,-,Kelt & van Vuren 2001,-,Robinson et al. 1986
+Dama_dama,2.0,1.9,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Dendrolagus_lumholtzi,2.0,0.8,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Meredith et al. 2008
+Diceros_bicornis,2.0,3.0,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Popowics et al. 1997
+Elephas_maximus,2.0,3.6,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Pradhan et al. 2008
+Equus_burchelli,2.0,2.4,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Equus_caballus,2.0,2.6,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Equus_zebra,2.0,2.5,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Grobler, 1983"
+Gazella_gazella,2.0,1.3,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Giraffa_camelopardalis,2.0,3.1,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Popowics et al. 1997
+Glaucomys_sabrinus,2.0,-0.8,-,-,Herbivore,Mychophagus,Terrestrial,-,Kelt & van Vuren 2001,-,Maser et al. 1985
+Heliophobius_argenteocinereus,2.0,-0.8,-,-,Herbivore,Geophyte,Terrestrial,-,Kelt & van Vuren 2001,-,Le Comber et al. 2002
+Hyemoschus_aquaticus,2.0,1.0,-,-,Herbivore,Frugivore,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Hystrix_indica,2.0,1.2,-,-,Herbivore,Geophyte,Terrestrial,-,Kelt & van Vuren 2001,-,Alkon et al. 1988
+Lepus_alleni,2.0,0.6,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Lepus_americanus,2.0,0.6,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Lepus_californicus,2.0,0.4,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Lepus_capensis,2.0,0.6,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Lepus_timidus,2.0,0.5,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Loxodonta_africana,2.0,3.6,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,White et al. 1993
+Macropus_antilopinus,2.0,1.4,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Meredith et al. 2008
+Macropus_dorsalis,2.0,1.1,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Meredith et al. 2008
+Macropus_fuliginosus,2.0,1.3,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Meredith et al. 2008
+Macropus_giganteus,2.0,1.0,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Meredith et al. 2008
+Macropus_robustus,2.0,1.3,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Meredith et al. 2008
+Macropus_rufogriseus,2.0,1.2,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Meredith et al. 2008
+Macropus_rufus,2.0,1.7,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Meredith et al. 2008
+Madoqua_guentheri,2.0,0.7,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Microtus_californicus,2.0,-1.2,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Freeman et al. 2008
+Microtus_montanus,2.0,-1.3,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Freeman et al. 2008
+Microtus_ochrogaster,2.0,-1.5,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Freeman et al. 2008
+Microtus_pennsylvanicus,2.0,-1.3,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Freeman et al. 2008
+Microtus_pinetorum,2.0,-1.5,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Freeman et al. 2008
+Microtus_richardsoni,2.0,-1.1,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Freeman et al. 2008
+Muntiacus_reevesi,2.0,1.1,-,-,Herbivore,Frugivore,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Neotoma_cinerea,2.0,-0.4,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Dial. 1988; Dearing et al. 2000
+Neotoma_fuscipes,2.0,-0.5,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Dial. 1988; Dearing et al. 2000
+Neotoma_lepida,2.0,-0.9,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Dial. 1988; Dearing et al. 2000
+Neotoma_micropus,2.0,-0.6,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Dial. 1988; Dearing et al. 2000
+Ochotona_collaris,2.0,-0.9,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Ochotona_princeps,2.0,-0.7,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Odocoileus_hemionus,2.0,1.7,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Odocoileus_virginianus,2.0,1.9,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Okapia_johnstoni,2.0,2.4,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Onychogalea_fraenata,2.0,0.7,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Meredith et al. 2008
+Oryctolagus_cuniculus,2.0,0.2,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Ovis_ammon,2.0,2.1,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Ovis_canadensis,2.0,2.0,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Ozotoceros_bezoarticus,2.0,1.5,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Pecari_tajacu,2.0,1.4,-,-,Herbivore,Frugivore,Terrestrial,-,Kelt & van Vuren 2001,-,Altrichter et al. 2001
+Phacochoerus__aethiopicus,2.0,1.9,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Botha et al. 2005
+Potos_flavus,2.0,0.5,-,-,Herbivore,Frugivore,Terrestrial,-,Kelt & van Vuren 2001,-,"Kays et al. 1999, Julien-Laferri et al. 1999"
+Pudu_puda,2.0,0.9,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Rangifer_tarandus,2.0,2.0,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Popowics et al. 1997
+Raphicerus_campestris,2.0,1.1,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Rupicapra_rupicapra,2.0,1.5,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Sciurus_aberti,2.0,-0.1,-,-,Herbivore,Granivore,Terrestrial,-,Kelt & van Vuren 2001,-,Freeman et al. 2008
+Sciurus_carolinensis,2.0,-0.3,-,-,Herbivore,Granivore,Terrestrial,-,Kelt & van Vuren 2001,-,Freeman et al. 2008
+Sciurus_lis,2.0,-0.6,-,-,Herbivore,Granivore,Terrestrial,-,Kelt & van Vuren 2001,-,Freeman et al. 2008
+Sciurus_niger,2.0,0.0,-,-,Herbivore,Granivore,Terrestrial,-,Kelt & van Vuren 2001,-,Freeman et al. 2008
+Sciurus_vulgaris,2.0,-0.5,-,-,Herbivore,Granivore,Terrestrial,-,Kelt & van Vuren 2001,-,Freeman et al. 2008
+Setonix_brachyurus,2.0,0.5,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Hayward 2005
+Spermophilus_beecheyi,2.0,-0.1,-,-,Herbivore,Legume,Terrestrial,-,Kelt & van Vuren 2001,-,Schitoskey Jr. et al. 1978
+Sylvilagus_aquaticus,2.0,0.3,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Sylvilagus_audubonii,2.0,-0.1,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Sylvilagus_bachmani,2.0,-0.2,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Sylvilagus_floridanus,2.0,0.1,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Sylvilagus_palustris,2.0,0.1,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Sylvilagus_transitionalis,2.0,0.0,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Swihart 1986
+Syncerus_caffer,2.0,2.8,-,-,Herbivore,Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Tayassu_pecari,2.0,1.3,-,-,Herbivore,Frugivore,Terrestrial,-,Kelt & van Vuren 2001,-,Keuroghlian et al. 2008
+Thylogale_thetis,2.0,0.7,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Meredith et al. 2008
+Tragelaphus_oryx,2.0,2.8,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Tragelaphus_scriptus,2.0,1.7,-,-,Herbivore,Browser-grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Popowics et al. 1997
+Tragelaphus_strepsiceros,2.0,2.3,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,"Bodmer, 1990"
+Trichosurus_vulpecula,2.0,0.5,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,How et al. 2000
+Vombatus_ursinus,2.0,1.4,-,-,Herbivore,Browser-Grazer,Terrestrial,-,Kelt & van Vuren 2001,-,Rishworth et al. 1995
+Wallabia_bicolor,2.0,1.2,-,-,Herbivore,Browser,Terrestrial,-,Kelt & van Vuren 2001,-,Meredith et al. 2008

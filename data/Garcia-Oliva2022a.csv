@@ -1,0 +1,80 @@
+#,Species reported name,Species current name,Trophic strategy,Feeding mode,Theca,Sulcus morphology,"Equivalent spherical diameter (ESD, um)","Standard deviation of equivalent spherical diameter (ESD, um)","Optimal prey, specie","Optimal prey, taxa","Optimal prey size, (OPS, um)","Standard deviation, optimal prey size (um)",Minimum prey size (um),Maximum prey size (um),Median prey size (um),"Specialization factor, s",Primary source,Secondary source
+1,Gyrodinium spirale,,H,DE,0,overlaping,28,,Alexandrium tamarense,Dinophyta,32,,6.6,48.8,17.9,0,hansen1992,hansen1994
+2,Amphidinium carterae,,M,DE,0,straight,6.6,1.8,,,,,,,,,,jeong2005
+3,Prorocentrum minimum,Prorocentrum cordatum,M,DE,1,no-sulcus,12.1,2.5,Telaulax sp.,Cryptophyta,5.6,1.5,5.2,11.5,7.7,-1,,jeong2005
+4,Prorocentrum triestinum,,M,DE,1,no-sulcus,12.6,2,Telaulax sp.,Cryptophyta,5.6,1.5,5.2,12.1,7.9,-1,,jeong2005
+5,Gymnodinium impudicum,,M,DE,0,straight,17.8,2.6,,,,,5.2,11.5,7.7,,,jeong2005
+6,Scrippsiella trochoidea,,M,DE,1,straight,22.8,2.7,,,,,5.2,12.1,7.9,,,jeong2005
+7,Alexandrium tamarense,,M,DE,1,straight,28.1,3.1,,,,,5.2,12.1,7.9,,,jeong2005
+8,Akashiwo sanguinea,,M,DE,0,straight,30.8,3.5,Prorocentrum cordatum,Dinophyta,12.1,2.5,5.2,28.1,12.1,0,jeong2021,jeong2005
+9,Gymnodinium catenatum,,M,DE,0,straight,33.9,1.6,Telaulax sp.,Cryptophyta,5.6,1.5,5.2,12.1,7.9,-1,,jeong2005
+10,Karlodinium armiger,,M,TF,0,,14.9,,Rhodomonas baltica,Cryptophyta,9.8,,5.6,31.4,13.3,0,,berge2008
+11,Gyrodinium instriatum,,M,DE,0,overlaping,62,10,,,small,,,,,0,,uchida1997
+12,Gyrodinium instriatum,,M,TF,0,overlaping,62,10,,,large,,,,,0,,uchida1997
+13,Yihiella yeosuensis,,M,DE,0,straight,7.8,1.6,Telaulax sp.,Cryptophyta,5.6,1.5,5.6,5.6,5.6,-1,,jang2017
+14,Ansanella granifera,,M,DE,0,straight,10.5,,Pyramimonas sp.,Cryptophyta,5.6,1.5,0.9,5.6,2.2,-1,,lee2014
+15,Prorocentrum donghaiense,,M,DE,1,no-sulcus,13.2,2,Telaulax sp.,Cryptophyta,5.6,1.5,5.2,12.1,7.9,-1,jeong2005,lee2014
+16,Heterocapsa triquetra,,M,DE,1,straight,15,4.3,Telaulax sp.,Cryptophyta,5.6,1.5,5.2,12.1,7.9,-1,jeong2005,lee2014
+17,Prorocentrum micans,,M,DE,1,no-sulcus,26.6,2.8,Telaulax sp.,Cryptophyta,5.6,1.5,5.2,15,8.8,-1,jeong2005,lee2014
+18,Amylax triacantha,,M,DE,1,straight,30,,Mesodinium rubrum,Ciliate,22,,,,,0,park2013,lee2014a
+19,Lingulodinium polyedrum,Lingulodinium polyedra,M,DE,1,straight,36.6,3.6,Scrippsiella trochoidea,Dinophyta,25.1,2.9,5.2,28.1,12.1,0,jeong2005,lee2014
+20,Gymnodinium smaydae,,M,TF,0,straight,10.5,,Heterocapsa rotundata,Dinophyta,9.5,1.6,,,,0,lee2014a,lee2014
+21,Symbiodinium sp.,Effrenium voratum,M,TF,1,straight,11.1,,Heterosigma akashiwo,Dinophyta,11.5,1.9,,,,0,jeong2012,lee2014
+22,Paragymnodinium shiwhaense,,M,TF,0,straight,12.4,,Amphidinium carterae,Dinophyta,9.7,1.8,,,,0,yoo2010,lee2014
+23,Woloszynskia cincta,Biecheleria cincta,M,TF,0,straight,13.4,,Heterosigma akashiwo,Raphidophyta,11.5,1.9,4.8,9.7,6.8,0,kang2011,lee2014
+24,Gyrodinium auroleum,Gymnodinium auroleum,M,TF,0,straight,19.4,0.6,Telaulax sp.,Cryptophyta,5.6,1.5,0.9,9.7,3.0,0,jeong2010b,lee2014
+25,Gymnodinium gracilentum,,M,DE,0,,9.1,,Telaulax aphioxeia,Cryptophyta,8.5,,,,,-1,jakobsen2000,jeong2010
+26,Gyrodinium galatheanum,Karlodinium micrum,M,DE,0,straight,11,,Storeatula major,Cryptophyta,5.6,1.5,,,,-1,adolf2006,jeong2010
+27,Karlodinium veneficum,,M,TF,0,straight,11,,Storeatula major,Cryptophyta,6.6,1.5,,,,0,adolf2006,lee2014a
+28,Paragymnodinium shiwhaense,Gyrodiniellum shiwhaense,H,TF,0,,12.4,,Amphidinium carterae,Dinophyta,6.6,1.8,,,,0,yoo2010,jeong2010
+29,Karlodinium armiger,,M,DE,0,,16.7,,Rhodomonas baltica,Cryptophyta,10.7,,,,,0,berge2008,jeong2010
+30,Cochlodinium polykrikoides,Margalefidium polykrikoides,M,DE,0,overlaping,25.8,2.9,Telaulax sp.,Cryptophyta,5.6,1.5,,,,-1,"jeong2004, jeong2005",jeong2010
+31,Ceratium furca,,M,DE,1,straight,29,,,,,,,,,,graneli1997,jeong2010
+32,Gonyaulax polygrama,,M,DE,1,straight,32.5,,Telaulax sp.,Cryptophyta,5.6,1.5,,,,-1,jeong2005a,jeong2010
+33,Dinophysis acuminata,,M,TF,1,,35,,Myrionecta rubra,Ciliate,22,,,,,0,park2006,jeong2010
+34,Fragilidium subglobosum,,M,DE,1,straight,45,,Ceratium tripos,Dinophyta,59.5,,,,,0,hansen1997,jeong2010
+35,Dinophysis norvegica,,M,TF,1,,45,,,,,,,,,0,graneli1997,jeong2010
+36,Dinophysis acuta,,M,TF,1,,48.5,,,,,,,,,0,graneli1997,jeong2010
+37,Fragilidium cf. mexicanum,,M,DE,1,straight,54.5,,Lingolidium polyedrum,Dinophyta,37.9,,,,,0,jeong1999,jeong2010
+38,Gymnodinium sp.,,H,DE,0,,6,2,Rhodomonas salina,Cryptophyta,8,,4,10,6.3,-1,jakobsen1997,jeong2010
+39,Protoperidinium bipes,,H,PF,1,,7.8,,Skeletonema costatum,Diatom,5.9,,,,,,jeong2004,jeong2010
+40,Protoperidinium hirobis,,H,PF,1,,8.7,,Leptocylindrum danicus,Diatom,19.7,,,,,1,jacobson1986,jeong2010
+41,Luciella masanensis,,H,TF,1,,13.5,,Blood,Blood cells,6.1,,,,,0,jeong2007,jeong2010
+42,Pfiesteria piscicida,,H,TF,1,,13.5,,Blood,Blood cells,6.1,,4.8,30.8,12.2,0,jeong2006,jeong2010
+43,Stoeckeria algicida,,H,TF,1,,13.9,,Heterosigma akashiwo,Raphidophyta,11.5,1.9,11.5,11.5,11.5,0,jeong2005,jeong2010
+44,Oxyrrhis marina,,H,DE,0,no-sulcus,15.6,,Heterosigma akashiwo,Raphidophyta,11.5,1.9,,,,0,jeong2003,jeong2010
+45,Gyrodinium dominans,,H,DE,0,overlaping,20,,Skeletonema costatum,Diatom,5.4,,,,,,nakamura1995,jeong2010
+46,Protoperidinium vorax,,H,PF,1,straight,21,,Skeletonema pseudocostatum,Diatom,4,,,,,,siano2005,jeong2010
+47,Oblea rotundata,,H,PF,1,,21.6,,Ditylum brightwelli,Diatom,33,,,,,1,strom1993,jeong2010
+48,Protoperidinium steinii,,H,PF,1,,25.8,,Heterocapsa triquetra,Dinophyta,15,,11,37,20.2,1,naustvoll2000,jeong2010
+49,Protoperidinium huberi,,H,PF,1,,26.5,,Ditylum brightwelli,Diatom,26.5,,,,,1,buskey1994,jeong2010
+50,Diplopsalis lenticula,,H,PF,1,,31,,Ditylum brightwelli,Diatom,35.2,,,,,1,naustvoll1998,jeong2010
+51,Gyrodinium spirale,,H,DE,0,overlaping,31.8,,Prorocentrum minimum,Dinophyta,12.1,,,,,0,kim2004,jeong2010
+52,Protoperidinium excentricum,,H,PF,1,straight,35.8,,Ditylum brightwelli,Diatom,35.2,,12.1,2.5,5.5,1,menden-deuer2005,jeong2010
+53,Protoperidinium pellucidum,,H,PF,1,straight,36.1,,Ditylum brightwelli,Diatom,26.5,,,,,1,buskey1997,jeong2010
+54,Polykrikos kofoidii,,H,DE,0,overlaping,43.5,,Gymnodinium catenatum,Dinophyta,34,,,,,0,jeong2001,jeong2010
+55,Polykrikos kofoidii,,H,DE,0,overlaping,43.5,,Lingolidium polyedrum,Dinophyta,37.9,,,,,0,jeong2001,jeong2010
+56,Protoperidinium spiniferum,,H,PF,1,,45,,Leptocylindrum danicus,Diatom,19.7,,,,,1,jacobson1986,jeong2010
+57,Protoperidinium conicum,,H,PF,1,,45.7,,Ditylum brightwelli,Diatom,35.2,,,,,1,menden-deuer2005,jeong2010
+58,Protoperidinium pallidum,,H,PF,1,,46.6,,Ditylum brightwelli,Diatom,35.2,,10,212,46.0,1,naustvoll2000,jeong2010
+59,Zygabikodinium lenticulatum,,H,PF,1,,50,,Ditylum brightwelli,Diatom,35.2,,6,212,35.7,1,naustvoll2000,jeong2010
+60,Protoperidinium divergens,,H,PF,1,,61,,Lingolidium polyedrum,Dinophyta,38.2,,,,,1,jeong1994,jeong2010
+61,Protoperidinium crassipes,,H,PF,1,,73,,Lingolidium polyedrum,Dinophyta,36.6,,,,,1,jeong1994,jeong2010
+62,Protoperidinium depressum,,H,PF,1,,81,,Ditylum brightwelli,Diatom,35.2,,,,,1,menden-deuer2005,jeong2010
+63,Gyrodinium moestrupii,,H,DE,0,overlaping,18.4,,Alexandrium minutum,Dinophyta,21.9,,,,,0,,lee2014a
+64,Gyrodinium dominans,,H,DE,0,overlaping,20,,Prorocentrum minimum,Dinophyta,12.1,,,,,0,,lee2014a
+65,Takayama helix,,M,TF,0,,27.4,,Alexandrium lusitanitum,Dinophyta,20.4,,,,,0,,jeong2016a
+66,Takayama helix,,M,TF,0,,27.4,,Alexandrium tamarense,Dinophyta,31.2,,,,,0,,jeong2016a
+67,Oxyrrhis marina,,H,DE,0,no-sulcus,15.6,,Karlodinium veneficum,Dinophyta,9.1,,,,,0,,jeong2010
+68,Takayama helix,,M,DE,0,straight,27.4,,Heterocapsa triquetra,Dinophyta,15,4.3,,,,0,,jeong2016a
+69,Gyrodinium dominans,,H,DE,0,straight,25,,Heterocapsa triquetra,Dinophyta,10.9,,6,43,16.1,0,naustvoll2000b,fuchs2010
+70,Gyrodinium fusiforme,,H,DE,0,overlaping,16.1,,Heterocapsa triquetra,Dinophyta,10.9,,6,14,9.2,0,naustvoll2000b,fuchs2010
+71,Katodinium glaucum,,H,DE,0,straight,21.5,,Heterocapsa triquetra,Dinophyta,10.9,,6,12,8.5,0,naustvoll2000b,fuchs2010
+72,Alexandrium andersonii,,M,DE,1,straight,14.9,,Pyramimonas sp.,Cryptophyta,5.6,1.5,,,,-1,,lee2016a
+73,Alexandrium pohangense,,M,DE,1,straight,32,,Cochlodinium polykrikoides,Dinophyta,25.8,2.9,,,,0,,lee2016a
+74,Alexandrium pseudogonyaulax,,M,DE,1,straight,35.4,,Heterocapsa rotundata,Dinophyta,9.5,1.6,,,,0,,lee2016a
+75,Noctiluca scintillans,,H,DE,0,no-sulcus,225,15,Latex bead,Non-alive,80,,11.9,140,40.8,,,kiorboe1999
+76,Noctiluca scintillans,,H,DE,0,no-sulcus,225,15,Thalasosira weisflogii,Diatom,12.8,,,,,0,,kiorboe1999
+77,Lingulodinium polyedra,,M,DE,1,straight,36.6,3.6,Prorocentrum cordatum,Dinophyta,12.1,2.5,,,,0,,jeong2021
+78,Takayama tasmanica,,M,DE,0,,24.3,,Alexandrium minutum,Dinophyta,21.9,,,,,0,,jeong2021
+79,Heterocapsa steinii,,H,PF,1,,25,17,Heterocapsa triquetra,Dinophyta,10.9,,6,43,16.1,1,naustvoll2000,jeong2021
