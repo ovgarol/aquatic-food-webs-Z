@@ -1,7 +1,7 @@
 # z
 databases and scripts for a simple food web model
 
-Code and data available in https://github.com/ovgarol/z
+Code and data available in https://github.com/ovgarol/aquatic-food-webs-Z
 
 ## Requirenments
 ### Software
@@ -14,11 +14,15 @@ Code and data available in https://github.com/ovgarol/z
 
   physio_data: limit1 to limit6 # energetic and mechanical limits described in Portalier et al. (2019). 
 
+  NameYYYY.csv  # data collected and available in original databases https://doi.org/10.4319/lo.1994.39.2.0395,  https://doi.org/10.3354/meps08716,  http://dx.doi.org/10.3354/meps09502, https://doi.org/10.1007/s00227-022-04102-2, https://doi.org/10.1098/rspb.2014.2103, https://doi.org/10.1890/07-1551.1, https://doi.org/10.1890/0012-9658(2006)87[2411:CBRINF]2.0.CO;2 and https://idata.idiv.de/ddm/Data/ShowData/283?version=3
+
 ### External data
   283_2_FoodWebDataBase_2018_12_10.csv: GATEWAy database available in https://idata.idiv.de/ddm/Data/ShowData/283?version=3
 
 ## Execution
 Run the following scripts in the enumerated sequence:
+
+Data-processing-1.R # calculates body size and optimal prey size of provided databases in database.csv and minimal_model.csv 
 
 Figure-script-1.R   # calculates the Z-model using the data collated in database.csv and minimal_model.csv
 
@@ -32,7 +36,7 @@ Figure-script-5.R   # physical limits for preu acquisition
 
 Figure-script-6.R   # Accuracy and complexity of artificial food webs (supplement B)
 
-Figure-script-7.R   # ood web topology (supplement C)
+Figure-script-7.R   # food web topology (supplement C)
 
 Figure-script-8.R   # comparison of food webs reconstructions sub-samples
 
