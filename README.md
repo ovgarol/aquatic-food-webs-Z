@@ -40,6 +40,12 @@ Figure-script-7.R   # food web topology (supplement C)
 
 Figure-script-8.R   # comparison of food webs reconstructions sub-samples
 
+Figure-script-9.R   # parsimony analysis using AIC (supplement D part 2)
+
+Figure-script-10.R   # applies the size-only model and compare it to the sites of the database GATEWAy database  
+
+Figure-script-11.R   # residual analysis for optimal number of feeding guilds
+
 
 ## Additional data
 WORMS_names_taxonomy.csv: taxonomy of the predator species included in database.csv
