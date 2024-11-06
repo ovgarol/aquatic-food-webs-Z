@@ -10,7 +10,7 @@ sites <- read.csv("~/Documents/articles/functionalFeedingMode/map_coordinates.cs
 sites = as.data.frame(sites)
 eco.col=rep('tan1',length(sites$site))
 eco.col[sites$type=='lakes'] = 'brown'  
-eco.col[sites$type=='streams'] = 'tan4'
+eco.col[sites$type=='streams'] = '#708238'
 
 sites$ID = letters[1:18]
 sites$col = eco.col
