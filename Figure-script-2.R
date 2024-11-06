@@ -1,5 +1,5 @@
 matching.colors = c(alpha('tomato',0.15),alpha('royalblue',0.15),'gold2')
-site.palette = c('tan1','brown','tan4')
+site.palette = c('tan1','brown','#708238')
 
 #db.mm = read.csv("minimal_model_meca.csv",comment.char = '#') # to load alternative models
 db.mm = db.sp # using the mechanistic food web model
@@ -115,9 +115,9 @@ for(idx in what.to.plot){
     axis(side=1, at=(y), labels=y.lab,las=1,cex.axis=1.5)
     axis(side=2, at=(y), labels=y.lab,las=1,cex.axis=1.5)
     text(x.lim[1],y.lim[2],letters[n],adj=c(0,1),font=2,cex=1.5)
-    eco.col='tan1'
-    if(eco.type[n]=='lakes') eco.col='brown'
-    if(eco.type[n]=='streams') eco.col='tan4'
+    eco.col=site.palette[1]
+    if(eco.type[n]=='lakes') eco.col=site.palette[2]
+    if(eco.type[n]=='streams') eco.col=site.palette[3]
     mtext(side=3,unique(db$study.site),outer=F,line=0,adj=0,font=2,col=eco.col,cex=1.25)
     
     abline(a=0,b=1,lty=2)
