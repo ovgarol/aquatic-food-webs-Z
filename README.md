@@ -3,9 +3,9 @@ databases and scripts for a simple food web model
 
 Code and data available in https://github.com/ovgarol/aquatic-food-webs-Z
 
-## Requirenments
+## Requirements
 ### Software
-  R, including libraries: scales, latex2exp, igraph
+  R, including libraries: scales, latex2exp, igraph, mclust, stringr
 
 ### Input data
   database.csv: database of optimal prey size of aquatic predators
