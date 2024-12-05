@@ -24,8 +24,6 @@ Run the following scripts in the enumerated sequence:
 
 - Data-processing-1.R: calculates body size and optimal prey size of provided databases in database.csv and minimal_model.csv 
 
-- Data-tester.R: checks data source files
-
 - Figure-script-1.R: calculates the Z-model using the data collated in database.csv and minimal_model.csv
 
 - Figure-script-2.R: applies to generated model in the script above and compare it to the sites of the database GATEWAy database  
@@ -48,9 +46,12 @@ Run the following scripts in the enumerated sequence:
 
 - Figure-script-11.R: residual analysis for optimal number of feeding guilds
 
+- Data-tester.R: checks data source files produced by the Figure-scripts.
 
-## Additional data
-  - WORMS_names_taxonomy.csv: taxonomy of the predator species included in database.csv
+
+## Source data files
+Data files for quickly reproducing the figures of .
+Just execute `Data-tester.R`.
 
   - database_specialization.csv: specialization traits aggregated by feeding guilds
 
@@ -61,6 +62,14 @@ Run the following scripts in the enumerated sequence:
   - map_coordinates.csv: coordinates for the observed ecosystem
 
   - database_calculated.csv: calculated optimal prey size using specialization and size-only models
+
+
+## Additional data
+
+  - WORMS_names_taxonomy.csv: taxonomy of the predator species included in database.csv
+
+  - metadata.txt: detailed explanation for data files
+
 
 ## License
 If not stated otherwise, the entire analysis software is licensed under
