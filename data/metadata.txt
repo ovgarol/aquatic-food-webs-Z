@@ -1,33 +1,100 @@
-Metadata for database.csv
+# Metadata for database.csv
 This file includes sizes and optimal prey sizes of aquatic predators.
 COLUMNS:
-X: index value assigned alphabetically.
-name: identifier of the predator as species plus stage
-species: species of the predator if available
-esd: equivalent spherical diameter of the predator in microns
-opt: optimal prey size in microns
-group: predator feeding group (PFG)
-type: type of predator
-source: reference of the register 
-kingdom: the kingdom of the predator
-phylum: phylum of the predator
-class: class of the predator
-order: order of the predator
-family: family of the predator
-genus: genus of the predator
-tag: feeding guild of the predator, constructed by the combination of the fields 'group' and 'type'
+- X: index value assigned alphabetically.
+- name: identifier of the predator as species plus stage
+- species: species of the predator if available
+- esd: equivalent spherical diameter of the predator in microns
+- opt: optimal prey size in microns
+- group: predator feeding group (PFG)
+- type: type of predator
+- source: reference of the register 
+- kingdom: the kingdom of the predator
+- phylum: phylum of the predator
+- class: class of the predator
+- order: order of the predator
+- family: family of the predator
+- genus: genus of the predator
+- tag: feeding guild of the predator, constructed by the combination of the fields 'group' and 'type'
 
-Metadata for WORMS_names_taxonomy.csv
+# Metadata for WORMS_names_taxonomy.csv
 This file includes the taxonomy of aquatic predators.
 It is identical to the JSON metadata of WORMS (https://www.marinespecies.org/aphia.php?p=manual) with the addition of the field name, which connects to the file database.csv.
 
-Metadata for minimal_model.csv
+# Metadata for minimal_model.csv
 This file includes size limits of feeding guilds extracted from data.
+
 COLUMNS:
-group: predator feeding group (PFG)
-type: type of predator
-min.esd: minimum body size of the predator in microns
-max.esd: maximum body size of the predator in microns
-s: specialization factor calculated for the feeding guild
-color: indexed color for plotting purposes
-lty: indexed line type for plotting purposes
+- group: predator feeding group (PFG)
+- type: type of predator
+- min.esd: minimum body size of the predator in microns
+- max.esd: maximum body size of the predator in microns
+- s: specialization factor calculated for the feeding guild
+- color: indexed color for plotting purposes
+- lty: indexed line type for plotting purposes
+
+# Metadata for database_specialization.csv
+This file includes specialization traits aggregated by feeding guilds
+
+COLUMNS:
+- X: index value assigned alphabetically.
+- tag: feeding guild of the predator, as in database.csv
+- group: predator feeding group (PFG)
+- esd: mean equivalent spherical diameter of the predator in microns
+- esd.min: minimum equivalent spherical diameter of the predator in microns
+- esd.max: maximum equivalent spherical diameter of the predator in microns
+- opt: mean optimal prey size in microns
+- mean.D: logarithm of the mean ESD of the predator in microns
+- mean.m: logarithm of the mean prey to predator size ratio -- feeding mode
+- mean.m.sd: error in mean.m obtained by log-log linear regression
+- m: intercept of the esd~opt log-log linear regression
+- a or alpha: size dependence of the optimal prey size
+- s: specific specialization factor (non-normalized)
+- a.sd: error in a or alpha obtained by log-log linear regression
+- s.sd: error in s obtained by error propagation
+- stiffness: stiffness
+- opt.min: minimum optimal prey size
+- opt.max: maximum optimal prey size
+- r2: correlation coefficient for regression of esd~opt log-log linear regression
+
+# Metadata for database_ecosystems.csv
+This file includes whether or not observations of predator-prey interactions in observed natural ecosystems are represented using the specialization model
+
+COLUMNS:
+- X: index value assigned alphabetically.
+- site: name of the ecosystem
+- esd: equivalent spherical diameter of the predator in microns
+- opt: optimal prey size in microns
+- represented: observed interaction represented by the specialization model
+
+# Metadata for database_ecosystems_size_only.csv
+This file includes whether or not observations of predator-prey interactions in observed natural ecosystems are represented using the size-only model
+
+COLUMNS:
+- X: index value assigned alphabetically.
+- site: name of the ecosystem
+- esd: equivalent spherical diameter of the predator in microns
+- opt: optimal prey size in microns
+- represented: observed interaction represented by the size-only model
+
+# Metadata for map_coordinates.csv
+coordinates for the observed ecosystem
+
+COLUMNS:
+- site: name of the ecosystem
+- type: type of ecosystem, e.g., marine, lake, or stream
+- latitude: mean latitude of observations
+- longitude: mean longitude of observations
+- ID: letter used to mark site in map
+
+# Metadata for database_calculated.csv
+This file includes calculated optimal prey size using specialization and size-only models
+
+COLUMNS:
+- X: index value assigned alphabetically.
+- name: identifier of the predator as species plus stage
+- group: predator feeding group (PFG)
+- esd: equivalent spherical diameter of the predator in microns
+- opt: optimal prey size in microns
+- ops.0: optimal prey size calculated using specialization model in microns
+- ops.2: optimal prey size calculated using size-only model in microns
