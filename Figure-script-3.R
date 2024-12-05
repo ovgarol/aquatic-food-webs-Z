@@ -23,8 +23,8 @@ temp.pal = c(temp.pal[1:2],temp.pal[2:5])
 ####
 ## Figure 2
 ####
-
-par(mfrow=c(2,3),mai=.1+c(0.2,0.1,0.2,0.1),oma=c(3.5,3.5,.0,.0),las=1)
+pdf('./figures/BANDS.pdf',family='Helvetica',8,5)
+par(mfrow=c(2,3),family='Helvetica',mai=.1+c(0.1,0.1,0.2,0.1),oma=c(3.5,3.5,.0,.0),las=1)
 i = 1 # auxiliary iterator
 ## separating invertebrates in two groups
 db.all$group[db.all$group=='Invertebrate'&db.all$opt<(20e-5*1e6)] = 'Invertebrate (II)'
@@ -54,8 +54,9 @@ for(kk in unique(db.all$group)[c(5,4,2,1,3,6)]){
             #ylim=exp(range(the.breaks)),
             xlab='',xaxt='n',
             ylab='',yaxt='n')
+  text(min(db.all.s$es),max(db.all.s$opt),letters[i],font=2,cex=1.5,adj=c(0,1))
   
-  title(main=c('unicellular','invertebrates-plankton','invertebrates','jellyfish','fish','mammals')[i],adj=0,line=0.33)
+  title(main=c('unicellular','planktonic invertebrates','invertebrates','jellyfish','fish','mammals')[i],adj=0,line=0.33)
   lines(x.range,x.range,lty=2) # add 1:1 dashed line
   #points(db.all.s$esd,db.all.s$ops.0) # to plot using allometric model
   #abline(v=exp(db.all.s$mean.D)) # add line for mean size
@@ -100,15 +101,13 @@ for(kk in unique(db.all$group)[c(5,4,2,1,3,6)]){
   II = 1:k
   for(jj in 1:k)II[jj] = ((log(max(db.all.s$esd[cut_avg==jj]))-log(min(db.all.s$esd[cut_avg==jj])))>.5*error.limit)&sum(cut_avg==jj)>=5
   test.ds = db.all.s[db.all.s$kk%in%c((1:k)*II),]
-  print(paste(kk,'============================================'))
+  print(paste(kk,length(db.all.s$esd),'============================================'))
   print(summary(lm(log(opt)~as.factor(kk),data=test.ds)))
   
   
   for(j in 1:length(db.all.s$esd)) lines(db.all.s$esd[j]*c(1,1),c(db.all.s$opt.c[j],db.all.s$opt[j]),lwd=.5,col=alpha(temp.pal[i],1))
   points(db.all.s$esd,db.all.s$opt.c,bg=alpha(temp.pal[i],1), pch=21,type='p',col='white',cex=1.,lwd=0.25)
   points(db.all.s$esd,db.all.s$opt,col=alpha(temp.pal[i],1), pch='_',type='p',cex=1.,lwd=1)
-  
-  
   
   y=c(1e-1,1e0,1e1,1e2,1e3,1e4,1e5,1e6,1e7)
   y.lab = c(TeX('10$^{-7}$'),TeX('10$^{-6}$'),TeX('10$^{-5}$'),TeX('10$^{-4}$'),TeX('10$^{-3}$'),TeX('10$^{-2}$'),TeX('10$^{-1}$'),TeX('10$^{0}$'),TeX('10$^{1}$'))
@@ -120,3 +119,5 @@ for(kk in unique(db.all$group)[c(5,4,2,1,3,6)]){
 
 mtext(side=1,'predator size (m)',outer=T,line=2,cex=1.)
 mtext(side=2,'optimal prey size (m)',outer=T,las=0,line=2,cex=1.)
+
+dev.off()

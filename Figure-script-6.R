@@ -203,8 +203,9 @@ plot(0:5,1:6,ylim=c(-.8,-0.1),xlim=c(.5,5),type='n',
      xlab='feeding guild width, log-units',
      ylab='')
 title(main=TeX('scaling exponent, $\\beta$',bold=T),adj=0,line=0.66)
-polygon(c(0,0,6,6),-0.35+2*0.11*c(1,-1,-1,1),col='gray95',border=NA)
+#polygon(c(0,0,6,6),-0.35+2*0.11*c(1,-1,-1,1),col='gray95',border=NA)
 polygon(c(0,0,6,6),-0.35+0.11*c(1,-1,-1,1),col='gray85',border=NA)
+text(3,-0.3,TeX('real food web\n$\\beta \\pm error$',bold=T),cex=1.5,col='white')
 
 abline(h=-0.35,lwd=3,col='white')
 for(i in 1:length(beta))lines(possible.w[i]+c(0,0),beta[i]+c(-1,1)*beta.sd[i])
@@ -227,11 +228,22 @@ for(w in 3.4*10){
   i = i +1
 }
 abline(lm(log10(cc.real)~log10(vv.real)),lty=2)
-s0=lm(log(cc.real)~log(vv.real))
+cc.d = cc.real
+vv.d = vv.real
+s0=lm(log(cc.d)~log(vv.d))
 summary(s0)
 
 w=34
 abline(lm(log10(cc[10*list.w==w])~log10(vv[10*list.w==w])))
+cc.d = cc[10*list.w==w]
+vv.d = vv[10*list.w==w]
+s1=lm(log(cc.d)~log(vv.d))
+summary(s1)
+anova(s0,s1)
+
+comparison = data.frame(vv=c(vv.d,vv.real),cc=c(cc.d,cc.real),group=c(rep('S',18),rep('O',18)))
+s0 = lm(log(cc)~log(vv)*group-1,data=comparison)
+summary(s0)
 
 z.beta = unname(abs(beta+0.35)/0.35)
 
@@ -247,5 +259,5 @@ lines((possible.w),score,lwd=3,type='l')
 abline(v=3.4)
 
 ##
-
+  
 

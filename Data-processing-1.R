@@ -86,9 +86,10 @@ unique(db$interaction.type)
 spec = NULL
 spec$specie = levels(as.factor(db$con.taxonomy))
 spec$type = levels(as.factor(db$con.taxonomy))
-spec$n.values = 0 * 1:length(spec$Predator)
-spec$esd = 0 * 1:length(spec$Predator)
-spec$opt = 0 * 1:length(spec$Predator)
+spec$n.values = 0 * 1:length(spec$specie)
+spec$esd = 0 * 1:length(spec$specie)
+spec$opt = 0 * 1:length(spec$specie)
+spec$slope = 0 * 1:length(spec$specie)
 
 i = 1
 for(j in spec$specie){
@@ -97,8 +98,11 @@ for(j in spec$specie){
   spec$esd[i] = 2*(median(temp$con.mass.mean.g.)*1e-3/1e3/(4*pi/3))**(1./3.)*1e6 # in micrometers
   spec$opt[i] = 2*(median(temp$res.mass.mean.g.)*1e-3/1e3/(4*pi/3))**(1./3.)*1e6 # in micrometers
   spec$n.values[i] = length(temp$con.mass.mean.g.)
+  if(!is.na(spec$esd[i])&!is.na(spec$opt[i])) spec$slope[i]=lm(log(temp$res.mass.mean.g.)~log(temp$con.mass.mean.g.))$coefficients[2]
   i = i+1
 }
+plot(log(spec$esd),log(spec$opt),type='p',log='')
+for(i in 1:length(spec$specie)) lines(c(log(spec$esd[i]))+c(-1,1)*0.2, c(log(spec$opt[i]))+c(-1,1)*spec$slope[i]*0.2)
 
 spec$group = 'Invertebrate'
 spec = as.data.frame(spec)
@@ -108,7 +112,7 @@ db.inv = subset(spec,select=c(specie,esd,opt,type,group))
 db.inv$source = 'Brose 2019'
 
 levels(as.factor(db.inv$type))
-write.csv(spec,'many-taxa.csv')
+write.csv(spec,'invertebrate_taxa.csv')
 
 ###
 
@@ -282,4 +286,4 @@ db.all$type[db.all$type=='Siphonophorae'] = 'tentacled'
 
 db.all$tag = as.factor(paste(db.all$group,'-',db.all$type))
 db.all$X = 1:length(db.all$esd)
-write.csv(db.all,file='db_all_dirty2.test.csv',row.names = F)
+write.csv(db.all,file='db_all.test.csv',row.names = F)

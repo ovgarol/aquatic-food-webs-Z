@@ -82,7 +82,7 @@ construct.fw = function(db){
   
   if(plot.it){
     plot(net,
-         #vertex.color=hcl.colors(10)[posi.1/max(posi.1)*9+1],
+         vertex.color='dodgerblue',#hcl.colors(10)[posi.1/max(posi.1)*9+1],
          vertex.label=NA,#vertex.size=8*(1+as.numeric(n.mm<30)),
          edge.color=alpha('lightgray',0.5),
          edge.arrow.size=.25,edge.color='lightgray',
@@ -174,7 +174,7 @@ fit.fw.model = function(db,w){
   
   if(plot.it){
     plot(net, 
-         #vertex.color=hcl.colors(10)[posi.1/max(posi.1)*9+1],
+         vertex.color='black',#,hcl.colors(10)[posi.1/max(posi.1)*9+1],
          vertex.label=NA,vertex.size=8*(1+as.numeric(n.mm<30)),
          edge.color=alpha('lightgray',0.5),
          edge.arrow.size=.25,edge.color='lightgray',add=F,layout=l)
@@ -312,13 +312,22 @@ for(idx in (1:length(what.to.plot))){
   coor[idx] = paste(db$study.site[1],db$ecosystem.type[1],db$latitude[1],db$longitude[1],sep=',') 
   eco.col='tan1'
   if(eco.type[n]=='lakes') eco.col='brown'
-  if(eco.type[n]=='streams') eco.col='tan4'
+  if(eco.type[n]=='streams') eco.col='slategray'
   
   real=construct.fw(db)
-  mtext(side=3,unique(db$study.site),outer=F,line=0,adj=0,font=2,col=eco.col,cex=1.25)
   
+  ## to fix the site names
+  title.site = unique(db$study.site)
+  if(title.site=='NewZealandStreams') title.site = 'New Zealand Streams'
+  if(title.site=='Eastern Weddell Sea Shelf') title.site = 'Eastern Weddell Sea'
+  if(title.site=='Ythan Estuary, tidal Estuary of River Ythan, Forvie Nature Reserve') title.site = 'Ythan Estuary'
+  if(title.site=='Puerto Rico-Virgin Islands (PRVI) shelf complex') title.site = 'PRVI shelf complex'
+  if(idx ==14) title.site = paste(title.site,'(I)')
+  if(idx ==15) title.site = paste(title.site,'(II)')
+  mtext(side=3,title.site,outer=F,line=0,adj=0,font=2,col=eco.col,cex=1.25)
+
   art=fit.fw.model(db,3.4)
-  mtext(side=2,'0%',outer=F,line=0,adj=0,font=2,col='black',cex=1.25)
+  #mtext(side=2,'0%',outer=F,line=0,adj=0,font=2,col='black',cex=1.25)
   
   #ss=get.broken.model(db,0.5)
   #mtext(side=2,'5%',outer=F,line=0,adj=1,font=2,col='black',cex=1.25)

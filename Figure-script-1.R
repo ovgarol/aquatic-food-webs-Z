@@ -4,6 +4,17 @@ library(scales)
 library(latex2exp)
 library(igraph)
 
+#extrafont::font_import()
+extrafont::loadfonts()
+names(pdfFonts())
+
+par(family='Helvetica')
+#my.pal = colorRampPalette(c("orange","limegreen", "yellow3","tomato","dodgerblue")) # alternative colorpalette
+my.pal = colorRampPalette(hcl.colors(5,palette='Zi')[c(4,2,3,5,1)])
+#my.pal = colorRampPalette(hcl.colors(6,palette='Purple-Yell')[c(4,2,3,5,1)])
+palette(my.pal(5))
+
+
 ####
 # DATA INPUT
 ####
@@ -46,9 +57,9 @@ abs = function(x)  base::abs(x)
 
 
 bounding.box = function(esd.min,esd.max,kw,mean.m,s,mean.D,stiffness,col='gray',...){
-  kw=1+1/sqrt(3)
-  qq.min<-1e0*exp(exp(-s**2)*(log(esd.min)-mean.D)+mean.D+mean.m+s/stiffness-0*gamma*(log(esd.min)-mean.D+3)**2-0.45)
-  qq.max<-1e0*exp(exp(-s**2)*(log(esd.max)-mean.D)+mean.D+mean.m+s/stiffness-0*gamma*(log(esd.max)-mean.D+3)**2-0.45)
+  kw=1+2/sqrt(3) #3
+  qq.min = 1e0*exp(exp(-s**2)*(log(esd.min)-mean.D)+mean.D+mean.m+s/stiffness-0*gamma*(log(esd.min)-mean.D+3)**2-0.45)
+  qq.max = 1e0*exp(exp(-s**2)*(log(esd.max)-mean.D)+mean.D+mean.m+s/stiffness-0*gamma*(log(esd.max)-mean.D+3)**2-0.45)
   polygon(c(esd.min,esd.max,esd.max,esd.min), c(qq.min/kw,qq.max/kw,qq.max*kw,qq.min*kw),border=alpha(col,0),lwd=1,col=alpha(col,0.25),...)
   #lines(c(esd.min,esd.max),c(qq.min,qq.max))
   #points(exp(0.5*(log(esd.min)+log(esd.max))), exp(0.5*(log(qq.min)+log(qq.max))),pch='*',cex=3)
@@ -86,10 +97,6 @@ Min.Spec = function(D,tag,db.mm){
 #####
 # CHECKING CONSISTENCY   
 #####
-
-#my.pal = colorRampPalette(c("orange","limegreen", "yellow3","tomato","dodgerblue")) # alternative colorpalette
-my.pal = colorRampPalette(hcl.colors(5,palette='Zi')[c(4,2,3,5,1)])
-palette(my.pal(5))
 
 ## counting guilds, groups and tags
 aggregate(db.all$name,by=list(db.all$tag), FUN = length)
@@ -185,8 +192,9 @@ the.col = (as.numeric(as.factor(spec$group)))*as.numeric(spec$a.sd>0) # vector w
 ### Figure A1
 ############
 
-par(mfrow=c(1,5))
-par(bty='o',mai=0.5*c(.8,.8,.2,.2),oma=1+c(0,0,0,0),las=1)
+pdf('./figures/STIFFNESS.pdf',family='Helvetica',10,3)
+par(mfrow=c(1,5),family='Helvetica')
+par(bty='o',mai=0.75*c(.8,.8,.2,.2),oma=1+c(0,0,0,0),las=1)
 L = seq(-5,5,length.out=300) # range of possible values of specific specialization
 
 ## calculation of stiffness
@@ -201,10 +209,11 @@ for(i in unique(spec$group)[c(4,2,1,3,5)]){#c(1,3,2,5,4)
        xaxt='n',yaxt='n',
        xlab='',
        ylab='',
-       main=c('unicellular','invertebrates','jellyfish','fish','mammals')[jj]
+       cex.lab=3.5,
+       cex.axis=3.5
   )
   text(-5,1.2,letters[jj],adj=c(0,1),font=2,cex=1.5)
-  
+  title(main=c('unicellular','invertebrates','jellyfish','fish','mammals')[jj],adj=0,cex.main=1.5,line=0.25)
   filt = spec$group==i # Selecting PFG
   
   ## calculation of stiffness 
@@ -214,7 +223,7 @@ for(i in unique(spec$group)[c(4,2,1,3,5)]){#c(1,3,2,5,4)
   spec[filt,]$stiffness = sqrt(temp.a[which.min(temp.b)]) # assigning stiffness that minimizes y
   
   my.lines(L,1*exp(-spec$stiffness[filt][1]**2*abs(L+displ)^2),lwd=3,col='black') # plotting theoretical line
-  text(0,1.2,paste('a = ',round(spec$stiffness[filt][1]**2,digits=2)),adj=c(0,1.)) # printing result
+  text(0,1.2,TeX(paste('a = ',round(spec$stiffness[filt][1]**2,digits=2))),adj=c(0,1.),cex=1.5) # printing result
   
   for(i in 1:length(spec$tag)) lines(spec$s[filt][i]+c(0,0),spec$a[filt][i]*(spec$a[filt][i]>-100)+0.99*spec$a.sd[filt][i]*c(-1,1)*as.numeric(spec$a[filt][i]>-100),col=the.col[filt][i],lwd=1.5) # error bar in y
   for(i in 1:length(spec$tag)) lines(spec$s[filt][i]+0.5*spec$s.sd[filt][i]*c(1,-1)*as.numeric(spec$a[filt][i]>-100),spec$a[filt][i]*(spec$a[filt][i]>-100)+c(0,0),col=the.col[filt][i],lwd=1.5) # error bar in x
@@ -227,10 +236,10 @@ for(i in unique(spec$group)[c(4,2,1,3,5)]){#c(1,3,2,5,4)
   jj=jj+1 # auxiliary iterator
 } 
 
-mtext('specific specialization S',side=1,line=-1,cex=0.75,las=0.5,adj=0.5,outer=T)
-mtext(TeX('scaling exponent $\\alpha$'),side=2,line=-1,cex=0.75,las=0,outer=T)
+mtext('specific specialization S',side=1,line=-1,cex=1,las=0.5,adj=0.5,outer=T)
+mtext(TeX('scaling exponent $\\alpha$'),side=2,line=-1,cex=1,las=0,outer=T)
 
-
+dev.off()
 
 ############
 ### Figure A4 error in OPS calculation
@@ -270,7 +279,8 @@ the.col=as.numeric(as.factor(db.all$group))#*as.numeric(spec$a.sd>0)
 # comparison size-only and specialization
 ###
 
-par(mfrow=c(2,3),oma=c(2,2,1,1),lend=1)
+pdf('./figures/ERROR.pdf',family='Helvetica',6,6)
+par(mfrow=c(2,3),oma=c(2,2,1,1),lend=1,las=1,mai=0.75*c(.8,.8,.4,.2),family='Helvetica')
 layout(matrix(c(1, 1, 2, 3), nrow=2, byrow=TRUE),widths=c(1,1,1,1),heights = c(2,2))
 
 if(T){
@@ -280,7 +290,8 @@ if(T){
   the.names = c('fish','invertebrates','jellies','mammals','plankton')
   
   plot(1,xlim=c(-0.2,5.2),ylim=1*c(0.,4),type='n',xaxt='n',yaxt='l',xlab='',ylab='',log='',
-       main=c('error comparison'),adj=0)
+       main='',adj=0,line=0,cex.main=2)
+  title(main='Error comparison',adj=0,line=0.5,cex.main=1.5)  
   abline(h=0,lty=1)
   text(-0.3,4,'a',adj=c(0,1),font=2,cex=1.5)
   
@@ -333,33 +344,46 @@ y.lab = c(' ',TeX('10$^{-6}$'),' ',TeX('10$^{-4}$'),' ',TeX('10$^{-2}$'),' ',TeX
 size.range = c(2e-1,3e6)
 size.range = c(5e-1,1e6)
 
+RMSD.allo = sqrt(sum((log(db.all$opt)-log(db.all$ops.2))**2)/length(db.all$ops.2))
+RMSD.spec = sqrt(sum((log(db.all$opt)-log(db.all$ops.0))**2)/length(db.all$ops.0))
+
+R2.allo = summary(lm(log(db.all$ops.2)~log(db.all$opt)))$r.squared
+R2.spec = summary(lm(log(db.all$ops.0)~log(db.all$opt)))$r.squared
+  
 plot(db.all$opt,db.all$ops.2,log='xy',xlab='',
-     main = 'size-only model',adj=0,
+     main = 'Allometric rule',adj=0,
      ylab='',pch=19,col=the.col,lwd=1,cex=0.5,yaxt='n',xaxt='n',
      xlim=size.range,ylim=size.range)
 text(min(size.range),max(size.range),'b',adj=c(0,1),font=2,cex=1.5)
 abline(b=1,a=0,lty=2)
 axis(side=1, at=(y), labels=y.lab,las=1,cex.lab=1.)
 axis(side=2, at=(y), labels=y.lab,las=1,cex.lab=1.)
+text(1e6,1e1,paste0('RMSD = ',round(RMSD.allo,digits=2)),adj=c(1,0.5))
+text(1e6,1e0,TeX(paste0('r$^2$ = ',round(R2.allo,digits=2))),adj=c(1,.5))
+
 mtext(side=2,'calculated OPS (m)',las=0,line=3,cex=0.8)
 mtext(side=1,'observed OPS (m)',las=0,line=0,cex=0.8,outer=T)
 
 plot(db.all$opt,db.all$ops.0,log='xy',xlab='',ylab='',
-     main = 'specialization model',adj=0,
+     main = 'Specialization model',adj=0,
      pch=19,col=the.col,lwd=1,cex=0.5,yaxt='n',xaxt='n',
      xlim=size.range,ylim=size.range)
 text(min(size.range),max(size.range),'c',adj=c(0,1),font=2,cex=1.5)
 abline(b=1,a=0,lty=2)
 axis(side=1, at=(y), labels=y.lab,las=1,cex.lab=1.)
 axis(side=2, at=(y), labels=NA,las=1,cex.lab=1.)
+text(1e6,1e1,round(RMSD.spec,digits=2),adj=c(1,0.5))
+text(1e6,1e0,round(R2.spec,digits=2),adj=c(1,.5))
 
 
+
+dev.off()
 
 ####
 ## Figure 2
 ####
 
-par(mfrow=c(1,3))
+pdf('./figures/OPS.pdf',family='Helvetica',8,8)
 par(bty='o',mfrow=c(2,2),mai=c(.8,.8,.2,.2),oma=c(0,0,0,0))
 size.range = c(1e0,10e6) # predator size range in microns
 
@@ -370,9 +394,9 @@ db.all$ss = db.all$s*db.all$stiffness # normalized specialization
 
 plot(1,xlim=range(db.all$esd),ylim=range(db.all$opt),log='xy',type='n',
      xaxt='n',yaxt='n',
-     xlab='predator size (m)',
-     ylab='optimal prey size (m)',
-     main='allometric rule and data')
+     xlab='',
+     ylab='optimal prey size (m)')
+title( main='allometric rule and data',adj=0)
 
 lines(size.range,size.range,lty=2)
 the.col = as.numeric(as.factor(db.all$group))
@@ -393,17 +417,17 @@ if(F){
   abline(lm(log10(opt)~log10(esd),data=db.all[db.all$class=='Cephalopoda',]))
   s=lm(log(opt)~log(esd),data=db.all[db.all$class=='Cephalopoda',])
   summary(s)
-  
-
 }
 
 ## Fig 2b: plot of feeding guilds
 
 plot(1,xlim=range(db.all$esd),ylim=range(db.all$opt),log='xy',type='n',
      xaxt='n',yaxt='n',
-     xlab='predator size (m)',
-     ylab='optimal prey size (m)',
-     main='feeding guilds')
+     xlab='',
+     ylab='',
+     main='')
+title( main='allometric rule and data',adj=0)
+mtext(side=4,'observations')
 
 lines(size.range,size.range,lty=2)
 the.shape = c(25,23,24)[1 + as.numeric(db.all$ss>-0.33) + as.numeric(db.all$ss >0.33)]
@@ -424,10 +448,14 @@ plot.new()
 
 plot(1,xlim=range(db.all$esd),ylim=range(db.all$opt),log='xy',type='n',
      xaxt='n',yaxt='n',
-     xlab='predator size (m)',
-     ylab='optimal prey size (m)',
-     main='food web model')
+     xlab='',
+     ylab='',
+     main='')
+title( main='food-web model',adj=0)
+
 lines(size.range,size.range,lty=2)
+
+mtext(side=4,'theory')
 
 #for(i in 1.5+c(0,2,4))for(j in -5:3) minimal.model(10^(i-1),10^(i+1),j*i/5) # old calculation (REMOVE)
 #for(i in 1+c(0,2,4))for(j in -5:2) minimal.model(10^(i-2),10^(i+2),j*i/5,col='gray')
@@ -464,12 +492,13 @@ db.sp$s = as.numeric(db.sp$s)
 axis(side=1, at=(y), labels=y.lab,las=1,cex.lab=1.)
 axis(side=2, at=(y), labels=y.lab,las=1,cex.lab=1.)
 
-
+dev.off()
 ##################
 # Figure 3
 ##################
 
-par(mfrow=c(2,2),las=1)
+pdf('./figures/TRADEOFFS.pdf',family='Helvetica',6,6)
+par(mfrow=c(2,2),las=1,family='Helvetica')
 par(bty='o',mfrow=c(2,2),mai=c(.8,.8,.2,.2),oma=c(0,0,0,0))
 high.color = 'red'
 
@@ -486,9 +515,9 @@ plot(a*(a>-0)~I(s*stiffness),data=spec,type='n',adj=0.5,
      xlim=4*c(-1,1),ylim=c(0,1.15),
      log='',
      xaxt='n',
-     xlab='specialization s',
-     ylab=TeX('scaling exponent $\\alpha$'),
-     main='variation in OPS scaling')
+     xlab='specialization, s',
+     ylab=TeX('scaling exponent, $\\alpha$'),
+     main='')
 
 axis(side=1,at=-c(-4,-2,0,2,4))
 
@@ -505,7 +534,7 @@ text(-4,1.15,'a',font=2,cex=1.5,adj=c(0,1))
 
 col.list = c(5,2,3,1,4)
 tag.list = c('unicellular','invertebrates','jellyfish','fish','mammals')
-legend("topright",legend=tag.list,
+if(F)legend("topright",legend=tag.list,
        horiz=F,
        lwd=0.5,
        lty=NA,
@@ -522,9 +551,9 @@ text(-3,0.8,TeX(paste('$r^2$ = ',round(pseudo.r2,digits=2)) ))
 plot(db.group$esd,db.group$stiffness**2,log='yx',type='n',xaxt='n',
      xlim=c(1e0,1e7),
      ylim=c(0.05,5),
-     main = 'effect of specialization in the OPS',
-     ylab = 'stiffness a',
-     xlab=TeX('mean PFG body size $\\bar{D}$ (m)'))
+     main = '',
+     ylab = 'stiffness, a',
+     xlab=TeX('mean PFG body size exp($\\bar{L}$) (m)'))
 
 y=c(1e-1,1e0,1e1,1e2,1e3,1e4,1e5,1e6,1e7)
 y.lab = c('',TeX('10$^{-6}$'),'',TeX('10$^{-4}$'),'',TeX('10$^{-2}$'),'',TeX('10$^{0}$'),'')
@@ -543,7 +572,7 @@ ss = summary(s)
 coef = round(s$coefficients, digits=2)
 r2 = round(ss$r.squared,digits = 2)
 
-text(1e0,3, paste('a =',round(exp(coef[1]),digits = 2),'exp(',coef[2],'D)') ,adj=c(0,1))
+text(1e0,3, TeX(paste('a =',round(exp(coef[1]),digits = 2),'e$^{',coef[2],'\\bar{L}}$')) ,adj=c(0,1))
 text(1e0,2, TeX(paste('$r^2$ = ',r2) ),adj=c(0,1))
 
 
@@ -552,9 +581,9 @@ text(1e0,2, TeX(paste('$r^2$ = ',r2) ),adj=c(0,1))
 plot(db.group$esd,db.group$mean.m,log='x',xaxt='n',type='n',
      xlim=c(1e0,1e7),
      ylim=c(-4,0),
-     main='variation in predator-prey ratio',
+     main='',#'variation in predator-prey ratio',
      ylab='mean feeding mode m',
-     xlab=TeX('mean PFG body size $\\bar{D}$ (m)'))
+     xlab=TeX('mean PFG body size exp($\\bar{L}$) (m)'))
 
 y=c(1e-1,1e0,1e1,1e2,1e3,1e4,1e5,1e6,1e7)
 y.lab = c('',TeX('10$^{-6}$'),'',TeX('10$^{-4}$'),'',TeX('10$^{-2}$'),'',TeX('10$^{0}$'),'')
@@ -570,7 +599,7 @@ points(exp(db.group$mean.D),db.group$mean.m,cex=1.5,pch=15,col=db.group$col,lwd=
 
 coef = round(s$coefficients, digits=2)
 r2 = round(ss$r.squared,digits = 2)
-text(1e0,-2.75, paste('m  =',coef[1],'+',coef[2],'D') ,adj=c(0,1))
+text(1e0,-2.75, TeX(paste('m  =',coef[1],coef[2],'$\\bar{L}$')) ,adj=c(0,1))
 text(1e0,-3, TeX(paste('$r^2$ = ',r2) ),adj=c(0,1))
 text(1e0,0,'c',font=2,cex=1.5,adj=c(0,1))
 
@@ -602,7 +631,7 @@ summary(s)
 ss = summary(s<-lm(abs(s)~I(log(ref.esd)**2)-1,data=db.mm[c(1,2,3,6,9,10,11,12,14,15),]))
 coef = round(s$coefficients, digits=3)
 r2 = round(ss$r.squared,digits = 3)
-text(1e0,-2, paste('|s| =',coef[1],'D^2') ,adj=c(0,1))
+text(1e0,-2, TeX(paste('|s| =',coef[1],'L$^2$')) ,adj=c(0,1))
 text(1e0,-3, TeX(paste('$r^2$ = ',r2) ),adj=c(0,1))
 
 xx = 10^(0.1*(-3:74))
@@ -615,4 +644,8 @@ for(i in 1:length(db.mm$group))lines(c(db.mm$esd.min[i],db.mm$esd.max[i]),db.mm$
 for(i in 1:length(db.mm$group))lines(db.mm$ref.esd[i]+c(0,0),db.mm$s[i]+0.5*c(-1,1)*db.mm$s.sd[i]*as.numeric(spec$a[i]>-0.5),col=palette()[db.mm$color[i]],lwd=1.5)
 for(i in 1:length(db.mm$group))points(db.mm$ref.esd[i],db.mm$s[i],col=palette()[db.mm$color[i]],lwd=.5,pch=19,cex=1.5)
 
+dev.off()
+
+write.csv(spec,'database_specialization.csv')
+write.csv(subset(db.all,select=c(name,group,esd,opt,ops.0,ops.2)),'database_calculated.csv')
 

@@ -1,5 +1,5 @@
 matching.colors = c(alpha('tomato',0.15),alpha('royalblue',0.15),'gold2')
-site.palette = c('tan1','brown','tan4')
+site.palette = c('tan1','brown','slategray')
 
 #db.mm = read.csv("minimal_model_meca.csv",comment.char = '#') # to load alternative models
 db.mm = db.sp # using the mechanistic food web model
@@ -9,10 +9,11 @@ for(i in 1:length(db.mm$tag)) db.mm$mean.OPS[i] = Min.Spec(exp(db.mm$mean.D[i]),
 
 my.pal = colorRampPalette(hcl.colors(5,palette='Zi'))(5)
 
-par(bty='o',mfrow=c(3,6),mai=0.051+c(.2,.2,.2,.2),oma=c(5,5,1,0))
+pdf('./figures/MODEL-SIZEONLY.pdf',family='Helvetica',16,8)
+par(bty='o',family='Helvetica',mfrow=c(3,6),mai=0.051+c(.2,.2,.2,.2),oma=c(5,5,1,0))
 
 n = 1
-error.limit = 3/sqrt(3) # width of feeding kernel
+error.limit = 2/sqrt(3) # width of feeding kernel
 
 ## metric values across food webs
 n.species = numeric() # number of species
@@ -52,6 +53,7 @@ db0 = db # keeping a copy of filtered GATEWAy
 length(unique(db0$foodweb.name[db$study.site%in%unique(db$study.site)[what.to.plot]]))
 unique(db0$study.site[db$study.site%in%unique(db$study.site)[what.to.plot]])
 length(db0$study.site[db$study.site%in%unique(db$study.site)[what.to.plot]])
+db.hist = data.frame(site=NULL,esd=NULL,ops=NULL,represented=NULL)
 
 ##
 total.obs  = 0 # observations counter
@@ -61,7 +63,7 @@ for(idx in what.to.plot){
   db = db[db$con.movement.type=='swimming',] # restricting to swimming predators
   db = db[db$con.mass.mean.g.!=-999 & db$res.mass.mean.g.!=-999, ] # removing NA values
   db = db[!is.na(db$autoID),] # removing NA values
-  db= db[!(db$res.taxonomy=='Calanus finnmarchicus'|db$res.mass.mean.g == 2.099800e-04),]
+  db = db[!(db$res.taxonomy=='Calanus finnmarchicus'|db$res.mass.mean.g == 2.099800e-04),]
   
   ## continue if the site has no data
   if(length(db$autoID)==0){
@@ -115,10 +117,19 @@ for(idx in what.to.plot){
     axis(side=1, at=(y), labels=y.lab,las=1,cex.axis=1.5)
     axis(side=2, at=(y), labels=y.lab,las=1,cex.axis=1.5)
     text(x.lim[1],y.lim[2],letters[n],adj=c(0,1),font=2,cex=1.5)
-    eco.col='tan1'
-    if(eco.type[n]=='lakes') eco.col='brown'
-    if(eco.type[n]=='streams') eco.col='tan4'
-    mtext(side=3,unique(db$study.site),outer=F,line=0,adj=0,font=2,col=eco.col,cex=1.25)
+    eco.col=site.palette[1]
+    if(eco.type[n]=='lakes') eco.col=site.palette[2]
+    if(eco.type[n]=='streams') eco.col=site.palette[3]
+    
+    ## to fix the site names
+    title.site = unique(db$study.site)
+    if(title.site=='NewZealandStreams') title.site = 'New Zealand Streams'
+    if(title.site=='Eastern Weddell Sea Shelf') title.site = 'Eastern Weddell Sea'
+    if(title.site=='Ythan Estuary, tidal Estuary of River Ythan, Forvie Nature Reserve') title.site = 'Ythan Estuary'
+    if(title.site=='Puerto Rico-Virgin Islands (PRVI) shelf complex') title.site = 'PRVI shelf complex'
+    if(idx ==14) title.site = paste(title.site,'(I)')
+    if(idx ==15) title.site = paste(title.site,'(II)')
+    mtext(side=3,title.site,outer=F,line=0,adj=0,font=2,col=eco.col,cex=1.25)
     
     abline(a=0,b=1,lty=2)
     
@@ -133,6 +144,8 @@ for(idx in what.to.plot){
     
     points(esds,opss,col=matching.colors[1+as.numeric(represented)],pch=19)
     if(F)for(i in 1:length(db.mm$tag)) if(touched[i]) minimal.model(db.mm$min.esd[i],db.mm$max.esd[i],db.mm$s[i],col='black',lty=1,lwd=2) # overlays the mechanistic model
+    db.local = data.frame(site=rep(title.site,length(esds)),esd=esds,ops=opss,represented=represented)
+    db.hist = rbind(db.hist,db.local)
     
   }
   
@@ -167,13 +180,14 @@ for(idx in what.to.plot){
       #text(x.lim[1],exp(log(y.lim[2])-0.3*diff(log(y.lim))),n.mm[n],adj=c(0,1),font=2,cex=1.5)
     } 
   }
-
+  
   n=n+1
 }
 
 db = db0
 mtext(side=1,TeX(paste0('log$_{10}$ ','predator size (m)')),outer=T,line=3,adj=0.5,cex=2)
 mtext(side=2,TeX(paste0('log$_{10}$ ','prey size (m)')),outer=T,line=2,adj=0.5,las=0,cex=2)
+dev.off()
 
 ## printing metric values across food webs
 mean(representativeness)
@@ -193,3 +207,5 @@ sd(connectance)
 
 mean(n.mm) 
 sd(n.mm) 
+
+write.csv(db.hist,'database_ecosystems_size_model.csv')

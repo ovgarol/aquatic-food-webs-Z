@@ -166,7 +166,7 @@ for(i in 1:length(db$name)){
 db$score = 0.5*(db$total.acc/100+db$fw.sim)
 db$score0 = pmin(db$total.acc/100,db$fw.sim)
 
-palette(alpha(c('brown','tan1','tan4'),0.15))
+palette(alpha(c('brown','tan1','slategray'),0.15))
 #unique(as.factor(db$type))
 
 #############

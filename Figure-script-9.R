@@ -16,6 +16,8 @@ AIC = function(k,x,y){
 # ops.4 for no m but yes s
 ##
 
+y=c(1e-1,1e0,1e1,1e2,1e3,1e4,1e5,1e6,1e7)
+y.lab = c(' ',TeX('10$^{-6}$'),' ',TeX('10$^{-4}$'),' ',TeX('10$^{-2}$'),' ',TeX('10$^{0}$'),' ')
 
 db.all$mean.D = NA + db.all$esd
 db.all$mean.m = NA + db.all$esd

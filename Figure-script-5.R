@@ -10,7 +10,7 @@ porta2019 = function(name){
 ####
 ## Figure A3
 ####
-
+par(mfrow=c(1,1),family='Helvetica')
 plot(1,xlim=range(db.all$esd),ylim=range(db.all$opt),log='xy',type='n',
      xaxt='n',yaxt='n',
      xlab='predator size (m)',ylab='optimal prey size (m)',
