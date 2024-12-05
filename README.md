@@ -24,6 +24,8 @@ Run the following scripts in the enumerated sequence:
 
 Data-processing-1.R # calculates body size and optimal prey size of provided databases in database.csv and minimal_model.csv 
 
+Data-tester.R # checks data source files
+
 Figure-script-1.R   # calculates the Z-model using the data collated in database.csv and minimal_model.csv
 
 Figure-script-2.R   # applies to generated model in the script above and compare it to the sites of the database GATEWAy database  
