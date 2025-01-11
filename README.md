@@ -14,7 +14,15 @@ Code and data available in https://github.com/ovgarol/aquatic-food-webs-Z
 
   - physio_data: limit1 to limit6: energetic and mechanical limits described in Portalier et al. (2019). 
 
-  - AuthorYYYY.csv: data collected and available in original databases https://doi.org/10.4319/lo.1994.39.2.0395,  https://doi.org/10.3354/meps08716,  http://dx.doi.org/10.3354/meps09502, https://doi.org/10.1007/s00227-022-04102-2, https://doi.org/10.1098/rspb.2014.2103, https://doi.org/10.1890/07-1551.1, https://doi.org/10.1890/0012-9658(2006)87[2411:CBRINF]2.0.CO;2 and https://idata.idiv.de/ddm/Data/ShowData/283?version=3
+  - AuthorYYYY.csv: data collected and available in original databases
+    -  https://doi.org/10.4319/lo.1994.39.2.0395,
+    -  https://doi.org/10.3354/meps08716,
+    -  http://dx.doi.org/10.3354/meps09502,
+    -  https://doi.org/10.1007/s00227-022-04102-2,
+    -  https://doi.org/10.1098/rspb.2014.2103,
+    -  https://doi.org/10.1890/07-1551.1,
+    -  https://doi.org/10.1890/0012-9658(2006)87[2411:CBRINF]2.0.CO;2, and
+    -  https://idata.idiv.de/ddm/Data/ShowData/283?version=3
 
 ### External data
   283_2_FoodWebDataBase_2018_12_10.csv: GATEWAy database available in https://idata.idiv.de/ddm/Data/ShowData/283?version=3
@@ -63,10 +71,17 @@ Just execute `Data-tester.R`.
 
   - database_calculated.csv: calculated optimal prey size using specialization and size-only models
 
+For publication purposes, individual source data files (one per figure) are included in the directory [source_data](https://github.com/ovgarol/aquatic-food-webs-Z/tree/main/source_data).
+
 
 ## Additional data
 
+Supplementary data files include:
+
   - WORMS_names_taxonomy.csv: taxonomy of the predator species included in database.csv
+
+
+## Additional data
 
   - metadata.txt: detailed explanation for data files
 
