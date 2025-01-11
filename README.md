@@ -74,7 +74,7 @@ Just execute `Data-tester.R`.
 For publication purposes, individual source data files (one per figure) are included in the directory [source_data](https://github.com/ovgarol/aquatic-food-webs-Z/tree/main/source_data).
 
 
-## Additional data
+## Supplementary data
 
 Supplementary data files include:
 
